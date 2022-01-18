@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Atures";
+  src: url("../fonts/Atures-700.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "CUSTOM LANG";
+  src: url("../fonts/jamesdeveron.ttf");
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
+  background: #171717;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
