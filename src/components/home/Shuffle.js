@@ -67,9 +67,6 @@ const Shuffle = () => {
     }
   }
 
-  const removeIcon = () => {
-    setPlaying(true)
-  }
   return (
     <>
       <VideoCoverSpan>
@@ -83,7 +80,7 @@ const Shuffle = () => {
             <video
               autoPlay={true}
               onEnded={changeVideo}
-              playing={removeIcon}
+              playing={true}
               src={images.image}
               volume={1}
               muted={false}
