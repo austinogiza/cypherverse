@@ -113,6 +113,12 @@ const AccordionTitle = styled.button`
   color: ${CypherTheme.white};
   height: 32px;
   text-align: left;
+
+  @media only screen and (max-width: 800px) {
+    min-height: 32px;
+
+    margin: 0 0 16px 0;
+  }
 `
 const TitleText = styled(Header6)``
 const AccordionText = styled.div<HeightProps>`

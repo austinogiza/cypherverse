@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import Malarian from "assets/videos/Malarian.mp4"
 // import Orb_3D from "assets/videos/Orb.mp4"
-import HASH from "assets/videos/HASH.mp4"
+import HASH from "assets/videos/Hash.mp4"
 import styled from "styled-components"
 import { BsPlayFill } from "react-icons/bs"
 import { CypherTheme } from "styles/ColorStyles"
