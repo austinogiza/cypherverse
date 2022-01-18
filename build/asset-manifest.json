@@ -5,8 +5,8 @@
     "static/js/1.f79ad715.chunk.js": "/static/js/1.f79ad715.chunk.js",
     "static/js/1.f79ad715.chunk.js.map": "/static/js/1.f79ad715.chunk.js.map",
     "main.css": "/static/css/main.39aee187.chunk.css",
-    "main.js": "/static/js/main.cfd8febf.chunk.js",
-    "main.js.map": "/static/js/main.cfd8febf.chunk.js.map",
+    "main.js": "/static/js/main.c79215cf.chunk.js",
+    "main.js.map": "/static/js/main.c79215cf.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c7b012c7.js",
     "runtime-main.js.map": "/static/js/runtime-main.c7b012c7.js.map",
     "static/css/4.58a45539.chunk.css": "/static/css/4.58a45539.chunk.css",
@@ -41,7 +41,7 @@
     "static/media/error.0f6c147f.svg": "/static/media/error.0f6c147f.svg",
     "static/media/james.194191c4.png": "/static/media/james.194191c4.png",
     "static/media/legends.4e94771a.jpg": "/static/media/legends.4e94771a.jpg",
-    "static/media/logo.85dfc7eb.svg": "/static/media/logo.85dfc7eb.svg",
+    "static/media/logo.d26a61f0.svg": "/static/media/logo.d26a61f0.svg",
     "static/media/meru.22c69b87.jpg": "/static/media/meru.22c69b87.jpg",
     "static/media/ships.efc1d766.jpeg": "/static/media/ships.efc1d766.jpeg"
   },
@@ -50,6 +50,6 @@
     "static/css/4.58a45539.chunk.css",
     "static/js/4.88140460.chunk.js",
     "static/css/main.39aee187.chunk.css",
-    "static/js/main.cfd8febf.chunk.js"
+    "static/js/main.c79215cf.chunk.js"
   ]
 }
