@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useLocation, Link } from "react-router-dom"
 
 import { CypherTheme } from "styles/ColorStyles"
-import logo from "assets/logo.png"
+import logo from "assets/logo.svg"
 
 const Footer: FC = () => {
   const router = useLocation()

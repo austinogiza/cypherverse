@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link, useLocation } from "react-router-dom"
-import logo from "assets/logo.png"
+import logo from "assets/logo.svg"
 
 import { CypherTheme } from "styles/ColorStyles"
 import React, { FC, MouseEvent, useState, useEffect } from "react"
