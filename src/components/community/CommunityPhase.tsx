@@ -1,8 +1,8 @@
-import { CypherTheme } from "styles/ColorStyles";
-import { Body1, Header1, Header6 } from "styles/TextStyles";
-import styled from "styled-components";
-import React, { FC } from "react";
-import phase from "assets/images/phase.png";
+import { CypherTheme } from "styles/ColorStyles"
+import { Body1, Header1, Header6 } from "styles/TextStyles"
+import styled from "styled-components"
+import React, { FC } from "react"
+import phase from "assets/images/phase.png"
 
 const CommunityPhase: FC = () => {
   return (
@@ -38,8 +38,8 @@ const CommunityPhase: FC = () => {
         </FirstRowRight>
       </FirstRow>
     </Body>
-  );
-};
+  )
+}
 
 const Body = styled.div`
   margin: 56px auto;
@@ -51,7 +51,7 @@ const Body = styled.div`
   height: 100%;
   padding: 16px;
   max-width: 1300px;
-`;
+`
 const Cover = styled.div`
   max-width: 1312px;
   margin: 0 auto;
@@ -60,7 +60,7 @@ const Cover = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-`;
+`
 
 const ImageCover = styled.img`
   max-width: 585px;
@@ -68,17 +68,17 @@ const ImageCover = styled.img`
   height: 100%;
   max-height: 524px;
   min-height: 250px;
-`;
+`
 const Title = styled(Header6)`
   color: ${CypherTheme.white};
   margin: 16px 0;
   text-align: center;
-`;
+`
 const TextTitle = styled(Header1)`
   color: ${CypherTheme.white};
   margin: 16px 0;
   text-align: center;
-`;
+`
 
 const FirstRow = styled.div`
   display: grid;
@@ -94,15 +94,15 @@ const FirstRow = styled.div`
   @media only screen and (max-width: 750px) {
     grid-template-columns: repeat(1, 1fr);
   }
-`;
+`
 const FirstRowLeft = styled.div`
   grid-area: "FirstLeft";
-`;
+`
 const FirstRowRight = styled.div`
   grid-area: "FirstRight";
-`;
+`
 const RowText = styled(Body1)`
   margin: 16px 0;
   color: ${CypherTheme.white};
-`;
-export default CommunityPhase;
+`
+export default CommunityPhase

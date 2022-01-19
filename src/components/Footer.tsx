@@ -14,7 +14,10 @@ const Footer: FC = () => {
           <Body>
             <FooterWrapper>
               <FooterRow>
-                <LogoImage src={logo} alt="cypherverse logo" />
+                <Link to="/">
+                  {" "}
+                  <LogoImage src={logo} alt="cypherverse logo" />
+                </Link>
               </FooterRow>
               <FooterRow>
                 <FooterLinkCover>
@@ -38,7 +41,7 @@ const Footer: FC = () => {
               <FooterRow>
                 <Buttons>
                   <DiscordButton
-                    href="https://discord.com/invite/ywEpsQYU"
+                    href="https://discord.gg/hJmfsEYCqE"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -57,7 +60,11 @@ const Footer: FC = () => {
 
                     <p> JOIN DISCORD</p>
                   </DiscordButton>
-                  <TwitterButton>
+                  <TwitterButton
+                    href="https://twitter.com/legendsofcypher"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <svg
                       width="25"
                       height="25"

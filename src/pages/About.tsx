@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 import cryotubes from "assets/images/ships.jpeg"
 import { CypherTheme } from "styles/ColorStyles"
-import { Body1, Header3, Header6 } from "styles/TextStyles"
+import { Body1, Header3, Header6, Body2 } from "styles/TextStyles"
 import Team from "components/about/Team"
 import RoadMap from "components/about/RoadMap"
 import React, { FC, useEffect } from "react"
@@ -29,15 +29,14 @@ const About: FC = () => {
             </FirstRowLeft>
             <FirstRowRight>
               <RowText>
-                The Cypherverse is a millennia old inter-planetary civilization
                 Welcome to the Legends of Cypher, a unique blockchain and
                 community-powered transmedia storytelling experience. Legends of
                 Cypher takes place in a fictional Cosmos featuring a
                 millennia-old inter-planetary civilization.
               </RowText>
               <RowText>
-                In the nearly 11,000 years since humans (with the assistance of
-                their AI allies) left Forgotten Earth, humanity has faced many
+                In the more than 11,000 years since humans (with the assistance
+                of their AI allies) left Ancient Earth, humanity has faced many
                 challenges. But now it faces its most significant test: the
                 choice of whether to continue with the Centopoly, humankind’s
                 most powerful, successful and enduring empire, or accept Hash’s
@@ -48,29 +47,23 @@ const About: FC = () => {
           </FirstRow>
           <MiddleRow>
             <RowText>
-              The founding team of Cypherverse is proud to deliver a fantastic
-              multi-media and blockchain-powered immersive and community
-              storytelling experience, where you can be involved in shaping the
-              story.
-            </RowText>
-            <RowText>
-              The Legends of Cypher Origin Group, spent more than 3,000 hours
-              over a seven-month period developing a rich, deep and engaging
+              The Legends of Cypher Origin Group, spent more than 3,500 hours
+              over an eight-month period developing a rich, deep and engaging
               story and lore, spanning over multiple in-Cosmos time periods.
-              Now, we are opening the Legends of Cypher to you. Join us and help
-              shape the future of the Cosmos.”
+              Now, we are opening the Legends of Cypher universe to you. Join
+              us, and help shape the future of the Cosmos!.
             </RowText>
           </MiddleRow>
+
           <SecondRow>
             <SecondRowLeft>
               <RowText>
-                Become a part of the Legends of Cypher universe. Join the
-                Discord and follow us on Twitter to begin your journey.
+                Join the Discord and follow us on Twitter to begin your journey.
               </RowText>
 
               <Buttons>
                 <DiscordButton
-                  href="https://discord.com/invite/ywEpsQYU"
+                  href="https://discord.gg/hJmfsEYCqE"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -89,7 +82,11 @@ const About: FC = () => {
 
                   <p> JOIN DISCORD</p>
                 </DiscordButton>
-                <TwitterButton>
+                <TwitterButton
+                  href="https://twitter.com/legendsofcypher"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <svg
                     width="25"
                     height="25"
@@ -110,8 +107,23 @@ const About: FC = () => {
               <GridImage src={cryotubes} alt="about cypherverse" />
             </SecondRowRight>
           </SecondRow>
+          <MiddleRow>
+            <Title>
+              Legends of Cypher Roadmap Highlights: June 2021 – Winter 2022
+            </Title>
+            <MiddleText>
+              The Legends of Cypher Origin Group has developed a multi-year
+              roadmap that will create a strong foundation for the project,
+              empower community members (Cypherians) to shape its development,
+              deliver unique benefits to early supporters, and tell a rich and
+              compelling story across multiple forms of media. Below is a
+              partial roadmap of current and planned Legends of Cypher
+              activities. All timelines and outputs are subject to change.
+              Delivery will depend on human/financial resources available to the
+              Origin Group.
+            </MiddleText>
+          </MiddleRow>
 
-          <Title>LEGENDS OF CYPHER ROADMAP HIGHLIGHTS</Title>
           <RoadMap />
 
           {/* team start */}
@@ -179,6 +191,7 @@ const FirstRowLeft = styled.div`
 
 const MiddleRow = styled.div`
   width: 100%;
+  margin: 32px 0;
 `
 const FirstRowRight = styled.div`
   grid-area: "FirstRight";
@@ -187,7 +200,10 @@ const RowText = styled(Body1)`
   margin: 16px 0;
   color: ${CypherTheme.white};
 `
-
+const MiddleText = styled(Body2)`
+  color: ${CypherTheme.white};
+  text-align: center;
+`
 const RowTextCenter = styled(Header6)`
   margin: 24px auto;
   text-align: center;
@@ -225,7 +241,7 @@ const SecondRowRight = styled.div`
 
 const Title = styled(Header3)`
   color: ${CypherTheme.white};
-  margin: 64px 0;
+  margin: 8px 0;
   text-align: center;
 `
 

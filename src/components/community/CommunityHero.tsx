@@ -30,7 +30,7 @@ const CommunityHero: FC = () => {
             part in the Legends of Cypher community.
           </Title>
           <DiscordButton
-            href="https://discord.com/invite/ywEpsQYU"
+            href="https://discord.gg/hJmfsEYCqE"
             target="_blank"
             rel="noopener noreferrer"
           >

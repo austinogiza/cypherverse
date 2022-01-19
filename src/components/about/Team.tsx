@@ -31,7 +31,7 @@ const Team: FC = () => {
       name: "Crayonz aka Barry Writer (MFA).",
       image: blurb,
       brief:
-        "Philosopher (BA). Infantryman and combat vet. Trained arguer. Photographer. Horrible artist. Lover of the mountains and the out-of-doors. New to crypto, but thinks that blockchain might help by nerfing some human tendancies.",
+        "Philosopher (BA). Infantryman and combat vet. Trained arguer. Photographer. Horrible artist. Lover of the mountains and the out-of-doors. New to crypto, but thinks that blockchain might help by nerfing some human tendencies.",
       twitter: "crayonz",
     },
     {
@@ -106,8 +106,9 @@ const TeamPhoto = styled.img`
   max-width: 400px;
   width: 100%;
   height: 100%;
-  max-height: 370px;
+  max-height: 350px;
   min-height: 250px;
+  object-fit: contain;
   @media only screen and (max-width: 650px) {
     max-width: 600px;
     max-height: 450px;

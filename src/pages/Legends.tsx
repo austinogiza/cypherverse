@@ -27,24 +27,23 @@ const Legends: FC = () => {
 
           <EmailComponent />
           <MiddleRow>
-            <MiddleText>Coming Soon 1</MiddleText>
+            <MiddleText>Coming Soon</MiddleText>
           </MiddleRow>
           <SecondRow>
             <SecondRowLeft>
-              <GridTitle>Meru-36 Destiny’s Fall (Jan. 2022)</GridTitle>
+              <GridTitle>Meru-36 Destiny’s Fall (Feb. 2022)</GridTitle>
               <RowText>
                 Meru-36: Destiny’s Fall features vital historical information
-                about the Synthetic War, which takes place millennia before
-                prior to the rise of the Centopoly. This book also provides a
-                glimpse into the minds and hearts of the nano-engineered
-                warriors who fought the Synthetic War’s final engagement: The
-                Battle of Meru-36. Join the Legends of Cypher Discord for
-                Updates
+                about the Synthetic War, which takes place millennia prior to
+                the rise of the Centopoly. The book also provides a glimpse into
+                the minds and hearts of the nano-engineered warriors who fought
+                the Synthetic War’s final engagement: The Battle of Meru-36.
+                Join the Legends of Cypher Discord for Updates
               </RowText>
 
               <Buttons>
                 <DiscordButton
-                  href="https://discord.com/invite/ywEpsQYU"
+                  href="https://discord.gg/hJmfsEYCqE"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
