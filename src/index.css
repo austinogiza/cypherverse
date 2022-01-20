@@ -14,12 +14,15 @@
   src: url("../src/fonts/Ature-Bold.woff") format("woff"),
     url("../src/fonts/Ature-Bold.woff2") format("woff2");
 }
-html,
-body {
+html {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
+}
+body {
   overflow-x: hidden;
   background: #171717;
+  visibility: hidden;
 }
 
 li {

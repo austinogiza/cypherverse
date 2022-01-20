@@ -92,12 +92,8 @@ const Head = styled.header<NavbarProps>`
   width: 100%;
   margin: 24px auto;
   height: 72px;
-  background: transparent;
-  @media only screen and (max-width: 1050px) {
-    background: ${(props) =>
-      props.color ? `${CypherTheme.black}` : "transparent"};
-    margin: 0 auto;
-  }
+  background: ${(props) =>
+    props.color ? `${CypherTheme.black}` : "transparent"};
 `
 
 const NavLink = styled(Link)`

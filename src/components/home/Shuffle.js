@@ -122,19 +122,9 @@ const VideoWrapper = styled.div`
     height: 100%;
     top: 0;
     left: 0;
-    object-fit: fill;
+    object-fit: contain;
     opacity: 1;
     width: calc(var(--vh, 1vw) * 100);
-
-    @media only screen and (max-width: 1050px) {
-      width: 100% !important;
-      max-width: 1200px;
-      margin: 0 auto;
-      /* padding: 24px; */
-      /* object-fit: none;
-            object-fit: cover;*/
-      object-fit: contain;
-    }
   }
 
   .image-cover {

@@ -5,7 +5,8 @@ import React, { FC } from "react"
 import styled from "styled-components"
 import clock from "assets/images/clock.png"
 import { Body1 } from "styles/TextStyles"
-import EmailComponent from "components/EmailComponent"
+
+import Substack from "components/Substack"
 
 const CommunityWaiting: FC = () => {
   return (
@@ -17,7 +18,8 @@ const CommunityWaiting: FC = () => {
           may encourage friendly competition among the Factions.
         </CoverText>
       </Cover>
-      <EmailComponent />
+      <Substack />
+      {/* <EmailComponent /> */}
     </Body>
   )
 }

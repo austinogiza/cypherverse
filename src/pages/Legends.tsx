@@ -7,7 +7,8 @@ import { Header3, Header4, Body3, Header7 } from "styles/TextStyles"
 
 import React, { FC, useEffect } from "react"
 import { Link } from "react-router-dom"
-import EmailComponent from "components/EmailComponent"
+
+import Substack from "components/Substack"
 
 const Legends: FC = () => {
   useEffect(() => {
@@ -24,8 +25,8 @@ const Legends: FC = () => {
             fought between two AI factions: one seeking freedom for humanity,
             the other continued dominance of the species.
           </Title>
-
-          <EmailComponent />
+          <Substack />
+          {/* <EmailComponent /> */}
           <MiddleRow>
             <MiddleText>Coming Soon</MiddleText>
           </MiddleRow>

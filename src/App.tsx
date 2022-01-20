@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react"
+import React, { lazy, Suspense, useEffect } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 import Layout from "container/Layout"
@@ -6,6 +6,7 @@ import ScrollToTop from "components/ScrollTop"
 import Translator from "pages/Translator"
 import PageTransition from "components/PageTransition"
 import "react-toastify/dist/ReactToastify.css"
+import gsap from "gsap"
 const Home = lazy(() => import(/* webpackPrefetch:true */ "pages/Home"))
 const About = lazy(() => import(/* webpackPrefetch:true */ "pages/About"))
 const Community = lazy(
@@ -14,11 +15,15 @@ const Community = lazy(
 const Legends = lazy(() => import(/* webpackPrefetch:true */ "pages/Legends"))
 const ErrorPage = lazy(() => import(/* webpackPrefetch:true */ "pages/404"))
 const App = () => {
+  useEffect(() => {
+    gsap.to("body", 0, { css: { visibility: "visible" } })
+  }, [])
   return (
     <>
       <BrowserRouter>
         <Layout>
           <ScrollToTop />
+
           <Suspense fallback={<PageTransition />}>
             <Routes>
               <Route path="/" element={<Home />} />
