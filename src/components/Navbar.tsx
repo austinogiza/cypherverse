@@ -17,7 +17,7 @@ const Navbar: FC<NavbarProps> = (props) => {
 
   // const { toggle } = props;
   const [menu, setMenu] = useState<boolean>(false)
-  const [menuColor, setMenuColor] = useState<boolean>(false)
+
   const [loading, setLoading] = useState<boolean>(false)
 
   const [timer, setTimer] = useState<number>(8)
@@ -43,16 +43,11 @@ const Navbar: FC<NavbarProps> = (props) => {
       setLoading(false)
       setTimer(3)
     }
-    if (router.pathname === "/") {
-      setMenuColor(true)
-    } else {
-      setMenuColor(false)
-    }
-  }, [menu, timer, router])
+  }, [menu, timer])
 
   return (
     <>
-      <Head color={menuColor}>
+      <Head>
         <Nav>
           <NavLink to="/">
             {router.pathname === "/" ? null : (
@@ -87,13 +82,12 @@ const Navbar: FC<NavbarProps> = (props) => {
   )
 }
 
-const Head = styled.header<NavbarProps>`
+const Head = styled.header`
   max-width: 1310px;
   width: 100%;
   margin: 24px auto;
   height: 72px;
-  background: ${(props) =>
-    props.color ? `${CypherTheme.black}` : "transparent"};
+  background: "transparent";
 `
 
 const NavLink = styled(Link)`

@@ -29,9 +29,7 @@ const About: FC = () => {
             </FirstRowLeft>
             <FirstRowRight>
               <RowText>
-                Welcome to the Legends of Cypher, a unique blockchain and
-                community-powered transmedia storytelling experience. Legends of
-                Cypher takes place in a fictional Cosmos featuring a
+                Legends of Cypher takes place in a fictional Cosmos featuring a
                 millennia-old inter-planetary civilization.
               </RowText>
               <RowText>
@@ -51,7 +49,7 @@ const About: FC = () => {
               over an eight-month period developing a rich, deep and engaging
               story and lore, spanning over multiple in-Cosmos time periods.
               Now, we are opening the Legends of Cypher universe to you. Join
-              us, and help shape the future of the Cosmos!.
+              us, and help shape the future of the Cosmos!
             </RowText>
           </MiddleRow>
 

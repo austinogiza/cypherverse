@@ -16,15 +16,15 @@ const Team: FC = () => {
       image: devin,
       twitter: "devinsawyer",
       brief:
-        "Former Traditional Finance Executive, Devin has 22 years experience in digital product, sales, design, analytics and creative production. A marketer and ecommerce veteran, Devin's has built multi-million dollar media functions that scale for engagement and growth with large audiences across all Media channels, with a focus on innovation in digital and content. Devin has recently made the transition to a full-time Web3 Founder and Community builder. In addition to co-founding Legends of Cypher, he was an early builder of the Bankless DAO Marketing Guild and more recently has been working at The Defiant, supporting Growth and Leading Partnerships. Check out Devin’s most recent marketing innovation at The Defiant",
+        "Former Traditional Finance Executive, Devin has 22 years experience in digital product, sales, design, analytics and creative production. A marketer and ecommerce veteran, Devin's has built multi-million dollar media functions that scale for engagement and growth with large audiences across all Media channels, with a focus on innovation in digital and content. Devin has recently made the transition to a full-time Web3 Founder and Community builder. In addition to co-founding Legends of Cypher, he was an early builder of the Bankless DAO Marketing Guild and more recently has been working at The Defiant, supporting Growth and Leading Partnerships. Check out Devin’s most recent marketing innovation at The Defiant.",
     },
     {
       id: 2,
       name: "Davoice",
       image: davoice,
-      twitter: "davoice",
+      twitter: "davoice321",
       brief:
-        "Davoice is a proud Sci-Fi nerd (he started writing science fiction stories in elementary school), international best selling non-fiction author, musician, composer and free thinker. (You’ll hear Davoice’s compositions across various Legends of Cypher project outputs.) He has also been an active transmedia storyteller since the mid-2000s and part of the emerging Web3 industry since 2015. Davoice is an NFT OG, playing an early role in major NFT projects such as Axie Infinity. Davoice is also a co-founder and contributing member of several DAOs, including AmpleSense (co-founder), Olympus DAO (core strategic team), Bankless DAO (early active member) and the upcoming Phonon DAO. You can find Davoice on Twitter at twitter.com/davoice321.",
+        "Davoice is a proud Sci-Fi nerd (he started writing science fiction stories in elementary school), international best selling non-fiction author, musician, composer and free thinker. (You’ll hear Davoice’s compositions across various Legends of Cypher project outputs.) He has also been an active transmedia storyteller since the mid-2000s and part of the emerging Web3 industry since 2015. Davoice is an NFT OG, playing an early role in major NFT projects such as Axie Infinity. Davoice is also a co-founder and contributing member of several DAOs, including AmpleSense (co-founder), Olympus DAO (core strategic team), Bankless DAO (early active member) and the Phonon DAO.",
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const Team: FC = () => {
       image: blurb,
       brief:
         "Philosopher (BA). Infantryman and combat vet. Trained arguer. Photographer. Horrible artist. Lover of the mountains and the out-of-doors. New to crypto, but thinks that blockchain might help by nerfing some human tendencies.",
-      twitter: "crayonz",
+      twitter: "barrytheauthor",
     },
     {
       id: 4,

@@ -78,13 +78,17 @@ const Home = () => {
     }
   }
 
+  const playingState = () => {
+    setPlaying(true)
+  }
+
   return (
     <Body className="image_bg_gif" color={color}>
       <VideoCoverSpan>
         <VideoCover>
           <VideoWrapper>
             {!playing && (
-              <PlayCover>
+              <PlayCover className="image_bg_gif">
                 <PlayButton onClick={() => videoHandler("play")} />
               </PlayCover>
             )}
@@ -92,6 +96,8 @@ const Home = () => {
               autoPlay={true}
               onEnded={changeVideo}
               playing={true}
+              onPlayingCapture={playingState}
+              onPlaying={playingState}
               src={images.image}
               volume={1}
               muted={false}
@@ -167,6 +173,7 @@ const PlayCover = styled.div`
   background: rgba(255, 255, 255, 0.3);
   display: flex;
   align-items: center;
+  visibility: hidden;
   justify-content: center;
   border-radius: 24px;
   cursor: pointer;
