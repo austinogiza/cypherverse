@@ -71,8 +71,10 @@ const Home = () => {
   const changeVideo = () => {
     if (images.id === 1) {
       setImage(items[1])
+      setColor(hashgif)
     } else if (images.id === 2) {
       setImage(items[0])
+      setColor(malariangif)
     }
   }
 
