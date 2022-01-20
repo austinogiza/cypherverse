@@ -96,25 +96,6 @@ const TranslatorBox = () => {
           >
             {message}
           </TransInput>
-          {/* <CopyBox onClick={copyText}>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15.9577 1.56836H4.45768C3.39872 1.56836 2.54102 2.42607 2.54102 3.48503V16.9017H4.45768V3.48503H15.9577V1.56836ZM18.8327 5.40169H8.29102C7.23206 5.40169 6.37435 6.2594 6.37435 7.31836V20.735C6.37435 21.794 7.23206 22.6517 8.29102 22.6517H18.8327C19.8916 22.6517 20.7493 21.794 20.7493 20.735V7.31836C20.7493 6.2594 19.8916 5.40169 18.8327 5.40169ZM18.8327 20.735H8.29102V7.31836H18.8327V20.735Z"
-                fill="white"
-              />
-            </svg>
-            {copied ? (
-              <CopyText> Copied</CopyText>
-            ) : (
-              <CopyText> Copy Text</CopyText>
-            )}
-          </CopyBox> */}
         </RightBox>
       </Boxgrid>
     </Body>
@@ -138,9 +119,6 @@ const Boxgrid = styled.div`
     align-items: center;
     justify-content: center;
   }
-  /* place-items: center; */
-  /* align-items: center; */
-  /* justify-content: center; */
 `
 const LeftBox = styled.div`
   width: 100%;
@@ -185,7 +163,7 @@ const TransInput = styled.textarea`
   outline: none;
   color: ${CypherTheme.white};
   padding: 16px;
-  text-transform: uppercase;
+
   resize: none;
   font-family: "CUSTOM LANG";
   font-size: 18px;
