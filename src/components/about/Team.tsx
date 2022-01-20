@@ -28,10 +28,10 @@ const Team: FC = () => {
     },
     {
       id: 3,
-      name: "Crayonz aka Barry Writer (MFA).",
+      name: "Crayonz",
       image: blurb,
       brief:
-        "Philosopher (BA). Infantryman and combat vet. Trained arguer. Photographer. Horrible artist. Lover of the mountains and the out-of-doors. New to crypto, but thinks that blockchain might help by nerfing some human tendencies.",
+        "Barry Writer (MFA). Philosopher (BA). Infantryman and combat vet. Trained arguer. Photographer. Horrible artist. Lover of the mountains and the out-of-doors. New to crypto, but thinks that blockchain might help by nerfing some human tendencies.",
       twitter: "barrytheauthor",
     },
     {
