@@ -5,7 +5,7 @@ import logo from "assets/logo.svg"
 import { CypherTheme } from "styles/ColorStyles"
 import React, { FC, MouseEvent, useState, useEffect } from "react"
 
-import { CustomLang, Header6 } from "styles/TextStyles"
+import { CustomLang } from "styles/TextStyles"
 
 interface NavbarProps {
   toggle?: boolean | any
@@ -20,7 +20,7 @@ const Navbar: FC<NavbarProps> = (props) => {
 
   const [loading, setLoading] = useState<boolean>(false)
 
-  const [timer, setTimer] = useState<number>(8)
+  const [timer, setTimer] = useState<number>(5)
 
   const handleToggle = (e: MouseEvent<HTMLSpanElement>) => {
     setMenu(!menu)
@@ -35,14 +35,18 @@ const Navbar: FC<NavbarProps> = (props) => {
       window.setInterval(() => {
         setTimer((timer) => timer - 1)
       }, 1000)
-
-      if (timer === 0) {
-        setLoading(true)
-      }
     } else {
       setLoading(false)
-      setTimer(10)
+      setTimer(5)
     }
+    // if (timer === 0) {
+    //   setTimer(8)
+    // }
+    if (timer <= 0) {
+      setTimer(5)
+      setLoading(true)
+    }
+    return () => clearInterval(timer)
   }, [menu, timer])
 
   return (
@@ -62,10 +66,6 @@ const Navbar: FC<NavbarProps> = (props) => {
             <MiddleBar toggle={menu} />
             <BottomBar toggle={menu} />
           </MenuBar>
-
-          <MobileMenuBar onClick={handleToggle}>
-            <MobileMenuText>Menu</MobileMenuText>
-          </MobileMenuBar>
         </Nav>
 
         <NavMenu toggle={menu}>
@@ -137,31 +137,7 @@ right: 16px; */
 
   @media only screen and (max-width: 650px) {
     top: 16px;
-    display: none;
   }
-`
-const MobileMenuBar = styled.div`
-  width: 80px;
-  height: 40px;
-  border-radius: 8px;
-  border: 1px solid ${CypherTheme.white};
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 41;
-  cursor: pointer;
-  /* position: fixed;
-top: 48px;
-right: 16px; */
-
-  @media only screen and (max-width: 650px) {
-    top: 16px;
-    display: flex;
-  }
-`
-const MobileMenuText = styled(Header6)`
-  color: ${CypherTheme.white};
 `
 const TopBar = styled.span<NavbarProps>`
   width: 36px;
@@ -228,7 +204,7 @@ const NavMenu = styled.div<NavbarProps>`
       font-family: "Atures";
       font-size: 28px;
       line-height: 1.3;
-      transition: 0.4s ease-in;
+      transition: 0.6s ease-in;
       @media only screen and (max-width: 600px) {
         font-size: 21px;
       }

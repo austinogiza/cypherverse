@@ -56,3 +56,12 @@ a {
   cursor: pointer;
   direction: ltr;
 }
+.default_lang {
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  display: "none";
+}
+.custom_lang {
+  margin-top: 56px;
+}
