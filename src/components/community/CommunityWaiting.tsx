@@ -25,7 +25,7 @@ const CommunityWaiting: FC = () => {
 }
 
 const Body = styled.div`
-  margin: 40px 0;
+  margin: 24px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

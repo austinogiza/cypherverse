@@ -115,7 +115,7 @@ const AccordionTitle = styled.button`
   text-align: left;
 
   @media only screen and (max-width: 800px) {
-    min-height: 32px;
+    min-height: 64px;
 
     margin: 0 0 16px 0;
   }

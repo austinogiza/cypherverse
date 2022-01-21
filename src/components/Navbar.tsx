@@ -41,7 +41,7 @@ const Navbar: FC<NavbarProps> = (props) => {
       }
     } else {
       setLoading(false)
-      setTimer(3)
+      setTimer(10)
     }
   }, [menu, timer])
 

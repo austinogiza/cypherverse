@@ -7,8 +7,8 @@ const Substack = () => {
       <iframe
         title="substack"
         src="https://legendsofcypher.substack.com/embed"
-        width="600"
-        height="600"
+        width="100%"
+        height="650"
         style={{ background: "transparent" }}
         frameBorder="0"
         scrolling="no"
@@ -19,13 +19,31 @@ const Substack = () => {
 
 const Body = styled.div`
   max-width: 900px;
+  width: 100%;
   margin: 0 auto;
   min-height: 400px;
   /* .use-theme-bg {
     background: transparent;
+  } */
+
+  .publication-tagline {
+    font-size: 16px;
+    margin: 8px 0 !important;
   }
+
   .embed-page {
     background: transparent;
-  } */
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media only screen and (max-width: 650px) {
+    .publication-tagline {
+      font-size: 13px;
+    }
+    .publication-name {
+      font-size: 26px;
+    }
+  }
 `
 export default Substack
