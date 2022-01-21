@@ -25,7 +25,7 @@ export const Header3 = styled.h1`
   line-height: 1.3;
   font-weight: 700;
   @media only screen and (max-width: 600px) {
-    font-size: 26px;
+    font-size: 24px;
   }
 `
 export const Header7 = styled.h1`
