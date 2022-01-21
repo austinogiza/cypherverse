@@ -5,7 +5,7 @@ import logo from "assets/logo.svg"
 import { CypherTheme } from "styles/ColorStyles"
 import React, { FC, MouseEvent, useState, useEffect } from "react"
 
-import { CustomLang } from "styles/TextStyles"
+import { CustomLang, Header6 } from "styles/TextStyles"
 
 interface NavbarProps {
   toggle?: boolean | any
@@ -62,6 +62,10 @@ const Navbar: FC<NavbarProps> = (props) => {
             <MiddleBar toggle={menu} />
             <BottomBar toggle={menu} />
           </MenuBar>
+
+          <MobileMenuBar onClick={handleToggle}>
+            <MobileMenuText>Menu</MobileMenuText>
+          </MobileMenuBar>
         </Nav>
 
         <NavMenu toggle={menu}>
@@ -133,7 +137,31 @@ right: 16px; */
 
   @media only screen and (max-width: 650px) {
     top: 16px;
+    display: none;
   }
+`
+const MobileMenuBar = styled.div`
+  width: 80px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid ${CypherTheme.white};
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 41;
+  cursor: pointer;
+  /* position: fixed;
+top: 48px;
+right: 16px; */
+
+  @media only screen and (max-width: 650px) {
+    top: 16px;
+    display: flex;
+  }
+`
+const MobileMenuText = styled(Header6)`
+  color: ${CypherTheme.white};
 `
 const TopBar = styled.span<NavbarProps>`
   width: 36px;
