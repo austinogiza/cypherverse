@@ -74,8 +74,8 @@ const Team: FC = () => {
 export default Team
 
 const TeamRow = styled.div`
-  min-height: 450px;
-  height: 100%;
+  min-height: 300px;
+
   max-width: 1288px;
   width: 100%;
 
@@ -87,7 +87,7 @@ const TeamRow = styled.div`
 const TeamBody = styled.div`
   width: 100%;
   max-width: 1300px;
-  height: 100%;
+
   display: grid;
   grid-template-columns: 1.5fr 5fr;
   margin: 16px auto;
@@ -98,7 +98,10 @@ const TeamBody = styled.div`
   color: ${CypherTheme.white};
   @media only screen and (max-width: 650px) {
     grid-template-columns: repeat(1, 1fr);
-    margin: 16px auto;
+    margin: 8px auto;
+
+    grid-gap: 4px;
+    gap: 4px;
   }
 `
 const TeamPhoto = styled.img`
