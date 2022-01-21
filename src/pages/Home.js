@@ -1,7 +1,16 @@
 import React, { useEffect, useRef, useState } from "react"
-import Malarian from "assets/videos/Malarian.mp4"
-// import Orb_3D from "assets/videos/Orb.mp4"
-import HASH from "assets/videos/Hash.mp4"
+import MalarianGroup1 from "assets/videos/Malarian_Group1.mp4"
+import MalarianGroup2 from "assets/videos/Malarian_Group2.mp4"
+import MalarianGroup3 from "assets/videos/Malarian_Group3.mp4"
+import MalarianGroup4 from "assets/videos/Malarian_Group4.mp4"
+import MalarianGroup5 from "assets/videos/Malarian_Group5.mp4"
+import MalarianGroup6 from "assets/videos/Malarian_Group6.mp4"
+
+import HashGroup1 from "assets/videos/Hash_Group1.mp4"
+import HashGroup2 from "assets/videos/Hash_Group2.mp4"
+import HashGroup3 from "assets/videos/Hash_Group3.mp4"
+import HashGroup4 from "assets/videos/Hash_Group4.mp4"
+import HashGroup5 from "assets/videos/Hash_Group5.mp4"
 import hashgif from "assets/videos/hash.gif"
 import malariangif from "assets/videos/malarian.gif"
 import styled from "styled-components"
@@ -12,11 +21,47 @@ const Home = () => {
   const items = [
     {
       id: 1,
-      image: Malarian,
+      image: MalarianGroup1,
     },
     {
       id: 2,
-      image: HASH,
+      image: HashGroup1,
+    },
+    {
+      id: 2,
+      image: MalarianGroup2,
+    },
+    {
+      id: 4,
+      image: HashGroup2,
+    },
+    {
+      id: 5,
+      image: MalarianGroup3,
+    },
+    {
+      id: 6,
+      image: HashGroup3,
+    },
+    {
+      id: 7,
+      image: MalarianGroup4,
+    },
+    {
+      id: 8,
+      image: HashGroup4,
+    },
+    {
+      id: 9,
+      image: MalarianGroup5,
+    },
+    {
+      id: 10,
+      image: HashGroup5,
+    },
+    {
+      id: 11,
+      image: MalarianGroup6,
     },
   ]
 
@@ -73,6 +118,33 @@ const Home = () => {
       setImage(items[1])
       setColor(hashgif)
     } else if (images.id === 2) {
+      setImage(items[2])
+      setColor(malariangif)
+    } else if (images.id === 3) {
+      setImage(items[3])
+      setColor(malariangif)
+    } else if (images.id === 4) {
+      setImage(items[4])
+      setColor(malariangif)
+    } else if (images.id === 5) {
+      setImage(items[5])
+      setColor(malariangif)
+    } else if (images.id === 6) {
+      setImage(items[6])
+      setColor(malariangif)
+    } else if (images.id === 7) {
+      setImage(items[7])
+      setColor(malariangif)
+    } else if (images.id === 8) {
+      setImage(items[8])
+      setColor(malariangif)
+    } else if (images.id === 9) {
+      setImage(items[9])
+      setColor(malariangif)
+    } else if (images.id === 10) {
+      setImage(items[10])
+      setColor(malariangif)
+    } else if (images.id === 11) {
       setImage(items[0])
       setColor(malariangif)
     }
