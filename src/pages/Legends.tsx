@@ -158,6 +158,9 @@ const Title = styled(Header3)`
   color: ${CypherTheme.white};
   margin: 64px 0;
   text-align: center;
+  @media only screen and (max-width: 700px) {
+    text-align: left;
+  }
 `
 
 const Buttons = styled.div`
