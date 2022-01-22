@@ -28,7 +28,7 @@ const Home = () => {
       image: HashGroup1,
     },
     {
-      id: 2,
+      id: 3,
       image: MalarianGroup2,
     },
     {
@@ -102,6 +102,69 @@ const Home = () => {
       } else if (
         parseInt(JSON.parse(localStorage.getItem("cyphervisits"))) === 1
       ) {
+        setImage(items[2])
+        localStorage.setItem("cyphervisits", JSON.stringify(2))
+
+        setColor(malariangif)
+      } else if (
+        parseInt(JSON.parse(localStorage.getItem("cyphervisits"))) === 2
+      ) {
+        setImage(items[3])
+        localStorage.setItem("cyphervisits", JSON.stringify(3))
+
+        setColor(hashgif)
+      } else if (
+        parseInt(JSON.parse(localStorage.getItem("cyphervisits"))) === 3
+      ) {
+        setImage(items[4])
+        localStorage.setItem("cyphervisits", JSON.stringify(4))
+
+        setColor(malariangif)
+      } else if (
+        parseInt(JSON.parse(localStorage.getItem("cyphervisits"))) === 4
+      ) {
+        setImage(items[5])
+        localStorage.setItem("cyphervisits", JSON.stringify(5))
+
+        setColor(hashgif)
+      } else if (
+        parseInt(JSON.parse(localStorage.getItem("cyphervisits"))) === 5
+      ) {
+        setImage(items[6])
+        localStorage.setItem("cyphervisits", JSON.stringify(6))
+
+        setColor(malariangif)
+      } else if (
+        parseInt(JSON.parse(localStorage.getItem("cyphervisits"))) === 6
+      ) {
+        setImage(items[7])
+        localStorage.setItem("cyphervisits", JSON.stringify(7))
+
+        setColor(hashgif)
+      } else if (
+        parseInt(JSON.parse(localStorage.getItem("cyphervisits"))) === 7
+      ) {
+        setImage(items[8])
+        localStorage.setItem("cyphervisits", JSON.stringify(8))
+
+        setColor(malariangif)
+      } else if (
+        parseInt(JSON.parse(localStorage.getItem("cyphervisits"))) === 8
+      ) {
+        setImage(items[9])
+        localStorage.setItem("cyphervisits", JSON.stringify(9))
+
+        setColor(hashgif)
+      } else if (
+        parseInt(JSON.parse(localStorage.getItem("cyphervisits"))) === 9
+      ) {
+        setImage(items[10])
+        localStorage.setItem("cyphervisits", JSON.stringify(10))
+
+        setColor(malariangif)
+      } else if (
+        parseInt(JSON.parse(localStorage.getItem("cyphervisits"))) === 10
+      ) {
         setImage(items[0])
         localStorage.setItem("cyphervisits", JSON.stringify(0))
 
@@ -113,38 +176,38 @@ const Home = () => {
       }
     }
   }, [])
-  const changeVideo = () => {
-    if (images.id === 1) {
+  const changeVideo = (id) => {
+    if (id === 1) {
       setImage(items[1])
       setColor(hashgif)
-    } else if (images.id === 2) {
+    } else if (id === 2) {
       setImage(items[2])
       setColor(malariangif)
-    } else if (images.id === 3) {
+    } else if (id === 3) {
       setImage(items[3])
-      setColor(malariangif)
-    } else if (images.id === 4) {
+      setColor(hashgif)
+    } else if (id === 4) {
       setImage(items[4])
       setColor(malariangif)
-    } else if (images.id === 5) {
+    } else if (id === 5) {
       setImage(items[5])
-      setColor(malariangif)
-    } else if (images.id === 6) {
+      setColor(hashgif)
+    } else if (id === 6) {
       setImage(items[6])
       setColor(malariangif)
-    } else if (images.id === 7) {
+    } else if (id === 7) {
       setImage(items[7])
-      setColor(malariangif)
-    } else if (images.id === 8) {
+      setColor(hashgif)
+    } else if (id === 8) {
       setImage(items[8])
       setColor(malariangif)
-    } else if (images.id === 9) {
+    } else if (id === 9) {
       setImage(items[9])
-      setColor(malariangif)
-    } else if (images.id === 10) {
+      setColor(hashgif)
+    } else if (id === 10) {
       setImage(items[10])
       setColor(malariangif)
-    } else if (images.id === 11) {
+    } else if (id === 11) {
       setImage(items[0])
       setColor(malariangif)
     }
@@ -166,7 +229,7 @@ const Home = () => {
             )}
             <video
               autoPlay={true}
-              onEnded={changeVideo}
+              onEnded={(id) => changeVideo(images.id)}
               playing={true}
               onPlayingCapture={playingState}
               onPlaying={playingState}
@@ -255,4 +318,4 @@ const PlayButton = styled(BsPlayFill)`
   height: 32px;
 `
 
-export default Home
+export default React.memo(Home)
