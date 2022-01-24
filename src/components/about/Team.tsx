@@ -6,7 +6,7 @@ import davoice from "assets/images/davoice.jpeg"
 import { AiOutlineTwitter } from "react-icons/ai"
 import { CypherTheme } from "styles/ColorStyles"
 import styled from "styled-components"
-import { Header6, Body2 } from "styles/TextStyles"
+import { Header6, Body3 } from "styles/TextStyles"
 
 const Team: FC = () => {
   const data = [
@@ -90,7 +90,7 @@ const TeamBody = styled.div`
 
   display: grid;
   grid-template-columns: 1.5fr 5fr;
-  margin: 16px auto;
+  margin: 32px auto;
   grid-gap: 16px;
   gap: 16px;
   align-items: center;
@@ -98,17 +98,16 @@ const TeamBody = styled.div`
   color: ${CypherTheme.white};
   @media only screen and (max-width: 650px) {
     grid-template-columns: repeat(1, 1fr);
-    margin: 8px auto;
-
+    margin: 16px auto;
     grid-gap: 4px;
     gap: 4px;
   }
 `
 const TeamPhoto = styled.img`
-  margin: 0 0 24px 0;
   max-width: 400px;
   width: 100%;
   height: 100%;
+  margin: 0;
   max-height: 350px;
   min-height: 250px;
   object-fit: contain;
@@ -121,10 +120,11 @@ const TeamPhoto = styled.img`
 const TeamCover = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 24px 0;
 `
 const TeamName = styled(Header6)`
   color: ${CypherTheme.white};
-  margin: 24px 0 8px 0;
+  margin: 8px 0;
 `
 const TeamSocial = styled.div`
   color: ${CypherTheme.white};
@@ -132,6 +132,7 @@ const TeamSocial = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  margin: 8px 0;
 `
 const TwitterIcon = styled(AiOutlineTwitter)`
   color: ${CypherTheme.white};
@@ -149,6 +150,6 @@ const TwitterLink = styled.a`
   }
 `
 
-const TeamBrief = styled(Body2)`
+const TeamBrief = styled(Body3)`
   margin: 8px 0;
 `

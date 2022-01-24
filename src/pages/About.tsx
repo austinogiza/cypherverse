@@ -125,7 +125,7 @@ const About: FC = () => {
           <RoadMap />
 
           {/* team start */}
-          <Title>THE LEGENDS OF CYPHER ORIGIN GROUP </Title>
+          <GroupTitle>THE LEGENDS OF CYPHER ORIGIN GROUP </GroupTitle>
           <Team />
           {/* team stop */}
         </Cover>
@@ -242,7 +242,14 @@ const Title = styled(Header3)`
   margin: 8px 0;
   text-align: center;
 `
-
+const GroupTitle = styled(Header3)`
+  color: ${CypherTheme.white};
+  margin: 80px 0 40px 0;
+  text-align: center;
+  @media only screen and (max-width: 650px) {
+    margin: 56px 0 24px 0;
+  }
+`
 const Buttons = styled.div`
   display: flex;
   flex-direction: row;
