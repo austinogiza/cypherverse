@@ -61,6 +61,19 @@ export const Header5 = styled.h4`
     font-size: 20px;
   }
 `
+export const Header8 = styled.h4`
+  font-family: "Atures";
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 700;
+
+  @media only screen and (max-width: 800px) {
+    font-size: 23px;
+  }
+  @media only screen and (max-width: 600px) {
+    font-size: 19px;
+  }
+`
 
 export const Header6 = styled.h4`
   font-family: "Atures";
@@ -72,6 +85,15 @@ export const Header6 = styled.h4`
   }
 `
 
+export const Header6Regular = styled.h4`
+  font-family: "Atures Regular";
+  font-size: 26px;
+  line-height: 1.6;
+  font-weight: 400;
+  @media only screen and (max-width: 600px) {
+    font-size: 19px;
+  }
+`
 export const Body1 = styled.p`
   font-family: "Atures Regular";
   font-size: 20px;

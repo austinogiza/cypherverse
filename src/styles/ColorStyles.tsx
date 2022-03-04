@@ -6,4 +6,5 @@ export const CypherTheme = {
   border: "#4a4242",
   black: "#000",
   red: "#ff0000",
+  cardBG: "#161616",
 }

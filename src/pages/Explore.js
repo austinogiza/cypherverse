@@ -17,7 +17,7 @@ import styled from "styled-components"
 import { BsPlayFill } from "react-icons/bs"
 import { CypherTheme } from "styles/ColorStyles"
 import gsap from "gsap"
-const Home = () => {
+const Explore = () => {
   const items = [
     {
       id: 1,
@@ -318,4 +318,4 @@ const PlayButton = styled(BsPlayFill)`
   height: 32px;
 `
 
-export default React.memo(Home)
+export default React.memo(Explore)

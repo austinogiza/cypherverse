@@ -93,6 +93,9 @@ const FirstRow = styled.div`
   gap: 40px;
   @media only screen and (max-width: 750px) {
     grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "FirstLeft"
+      "FirstRight";
   }
 `
 const FirstRowLeft = styled.div`

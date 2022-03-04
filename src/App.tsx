@@ -12,6 +12,7 @@ const About = lazy(() => import(/* webpackPrefetch:true */ "pages/About"))
 const Community = lazy(
   () => import(/* webpackPrefetch:true */ "pages/Community")
 )
+const Explore = lazy(() => import(/* webpackPrefetch:true */ "pages/Explore"))
 const Legends = lazy(() => import(/* webpackPrefetch:true */ "pages/Legends"))
 const ErrorPage = lazy(() => import(/* webpackPrefetch:true */ "pages/404"))
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/community" element={<Community />} />
               <Route path="/legends" element={<Legends />} />
+              <Route path="/explore" element={<Explore />} />
               <Route path="/translator" element={<Translator />} />
 
               <Route path="*" element={<ErrorPage />} />
