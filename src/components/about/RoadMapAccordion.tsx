@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { BsChevronDown, BsChevronUp } from "react-icons/bs"
 
 interface AccordionProps {
-  text: string
+  text: any
   title: string
 }
 
@@ -22,7 +22,7 @@ const RoadMapAccordion: FC<AccordionProps> = (props) => {
 
   const toggleAccordion = () => {
     setActive(!active)
-    setHeight(active === false ? `${content.current.scrollHeight}px` : "0px")
+    setHeight(active === false ? `100%` : "0px")
     setIconRotate(!iconRotate)
   }
 
@@ -42,7 +42,7 @@ const RoadMapAccordion: FC<AccordionProps> = (props) => {
             {iconRotate ? <UpIcon /> : <DownIcon />}
           </AccordionTitle>
           <AccordionText height={height} ref={content}>
-            <TextWords dangerouslySetInnerHTML={{ __html: text }} />
+            <TextWords>{text}</TextWords>
           </AccordionText>
         </MapRight>
       </AccordionGrid>
