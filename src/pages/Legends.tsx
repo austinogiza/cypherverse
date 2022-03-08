@@ -42,11 +42,7 @@ const Legends: FC = () => {
                 >
                   <p>READ BOOK FOR FREE</p>
                 </DiscordButton>{" "}
-                <TwitterButton
-                  href="https://twitter.com/legendsofcypher"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <TwitterButton to="/nft">
                   <p>BUY MERU-36 NFT </p>
                 </TwitterButton>
               </Buttons>
@@ -61,7 +57,7 @@ const Legends: FC = () => {
               Listen to the philosophies of Hash of the Cypherians and Malarian
               of the Centopoly.
             </MiddleText>
-            <MiddleButton>
+            <MiddleButton to="/explore">
               <p>Musings of Hash and Malarian</p>
             </MiddleButton>
           </MiddleRow>
@@ -270,7 +266,7 @@ const MiddleHeader = styled(Header7)`
   color: ${CypherTheme.white};
   text-align: center;
 `
-const MiddleButton = styled.a`
+const MiddleButton = styled(Link)`
   height: 58px;
   width: 370px;
   background: ${CypherTheme.white};
@@ -328,7 +324,7 @@ const CosmolBox = styled.div`
     font-size: 21px;
   }
 `
-const TwitterButton = styled.a`
+const TwitterButton = styled(Link)`
   height: 58px;
   width: 220px;
   background: ${CypherTheme.primary};

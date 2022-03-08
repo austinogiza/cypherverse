@@ -6,6 +6,7 @@ import { Body1 } from "styles/TextStyles"
 import cent from "assets/images/cent.gif"
 import { cardData } from "./CardData"
 import HomeCard from "./HomeCard"
+import { Link } from "react-router-dom"
 const HomeBody = () => {
   return (
     <Body>
@@ -31,11 +32,7 @@ const HomeBody = () => {
               stories, films, music, and art across a variety of mediums.
             </RowText>{" "}
             <Buttons>
-              <DiscordButton
-                href="https://discord.gg/hJmfsEYCqE"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <DiscordButton to="/legends">
                 <p>LoC Seasons</p>
               </DiscordButton>
             </Buttons>
@@ -49,6 +46,7 @@ const HomeBody = () => {
               image={data.image}
               page={data.page}
               text={data.text}
+              external={data.external}
               tag={data.hashtag}
             />
           ))}
@@ -161,7 +159,7 @@ const Buttons = styled.div`
     align-items: center;
   }
 `
-const DiscordButton = styled.a`
+const DiscordButton = styled(Link)`
   height: 58px;
   width: 190px;
   background: ${CypherTheme.white};

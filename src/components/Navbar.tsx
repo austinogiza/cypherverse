@@ -62,9 +62,11 @@ const Navbar: FC<NavbarProps> = (props) => {
       <Head>
         <Nav>
           <NavLink to="/">
-            <>
-              <LogoImage src={logo} alt="cypherverse logo" />
-            </>
+            {router.pathname === "/explore" ? null : (
+              <>
+                <LogoImage src={logo} alt="cypherverse logo" />
+              </>
+            )}
           </NavLink>{" "}
           {router.pathname === "/nft" ? (
             <>
@@ -95,7 +97,6 @@ const Navbar: FC<NavbarProps> = (props) => {
             </MenuBar>
           )}
         </Nav>
-
         <NavMenu toggle={menu}>
           <ul>
             <Link to="/about">
@@ -106,6 +107,9 @@ const Navbar: FC<NavbarProps> = (props) => {
             </Link>
             <Link to="/community">
               <li>{loading ? "COMMUNITY" : <Lang>COMMUNITY</Lang>} </li>
+            </Link>
+            <Link to="/explore">
+              <li>{loading ? "MUSING" : <Lang>MUSING</Lang>} </li>
             </Link>
           </ul>
         </NavMenu>
@@ -211,7 +215,7 @@ const NavMenu = styled.div<NavbarProps>`
   z-index: 40;
 
   transform: ${(props) =>
-    props.toggle ? "translateY(0px)" : "translateY(-50000px)"};
+    props.toggle ? "translateY(0px)" : "translateY(-500%)"};
 
   ul {
     width: 100%;

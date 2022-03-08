@@ -2,14 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import { CypherTheme } from "styles/ColorStyles"
 import { Body2 } from "styles/TextStyles"
-import dummy from "assets/images/dummy.png"
+import first from "assets/images/first.png"
+import second from "assets/images/second.png"
 const Preseason = () => {
   return (
     <Body>
       <Cover>
         <TopRow>
           <RowImage>
-            <Image src={dummy} alt="Legends of cypher preseason" />
+            <Image src={first} alt="Legends of cypher preseason" />
           </RowImage>
           <RowText>
             <RowContent>
@@ -46,7 +47,7 @@ const Preseason = () => {
         </BottomRow>{" "}
         <TopRow>
           <RowImage>
-            <Image src={dummy} alt="Legends of cypher preseason" />
+            <Image src={second} alt="Legends of cypher preseason" />
           </RowImage>
           <RowText>
             <RowContent>

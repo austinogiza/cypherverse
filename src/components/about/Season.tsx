@@ -2,14 +2,15 @@ import React from "react"
 import styled from "styled-components"
 import { CypherTheme } from "styles/ColorStyles"
 import { Body2 } from "styles/TextStyles"
-import dummy from "assets/images/dummy.png"
+import third from "assets/images/third.png"
+import fourth from "assets/images/fourth.png"
 const Season = () => {
   return (
     <Body>
       <Cover>
         <TopRow>
           <RowImage>
-            <Image src={dummy} alt="Legends of cypher Season" />
+            <Image src={third} alt="Legends of cypher Season" />
           </RowImage>
           <RowText>
             <RowContent>
@@ -40,7 +41,7 @@ const Season = () => {
         </BottomRow>{" "}
         <TopRow>
           <RowImage>
-            <Image src={dummy} alt="Legends of cypher preseason" />
+            <Image src={fourth} alt="Legends of cypher preseason" />
           </RowImage>
           <RowText>
             <RowContent>

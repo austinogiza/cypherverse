@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { CypherTheme } from "styles/ColorStyles"
 import { Body3, Header2, Header6, Header6Regular } from "styles/TextStyles"
 import meru from "assets/images/meru.jpg"
+import { Link } from "react-router-dom"
 const HomeHero = () => {
   return (
     <Body>
@@ -22,18 +23,10 @@ const HomeHero = () => {
               </ul>
             </RowText>
             <Buttons>
-              <DiscordButton
-                href="https://discord.gg/hJmfsEYCqE"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <DiscordButton to="/legends">
                 <p>Read the Story</p>
               </DiscordButton>{" "}
-              <TwitterButton
-                href="https://twitter.com/legendsofcypher"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <TwitterButton to="/nft">
                 <p>Buy the NFT </p>
               </TwitterButton>
             </Buttons>{" "}
@@ -149,7 +142,7 @@ const Buttons = styled.div`
     align-items: center;
   }
 `
-const DiscordButton = styled.a`
+const DiscordButton = styled(Link)`
   height: 58px;
   width: 190px;
   background: ${CypherTheme.white};
@@ -179,7 +172,7 @@ const DiscordButton = styled.a`
     }
   }
 `
-const TwitterButton = styled.a`
+const TwitterButton = styled(Link)`
   height: 58px;
   width: 190px;
   background: ${CypherTheme.primary};

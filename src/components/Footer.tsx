@@ -9,7 +9,7 @@ const Footer: FC = () => {
   const router = useLocation()
   return (
     <>
-      {router.pathname === "/" || router.pathname === "*" ? null : (
+      {router.pathname === "/explore" || router.pathname === "*" ? null : (
         <>
           <Body>
             <FooterWrapper>
@@ -34,6 +34,9 @@ const Footer: FC = () => {
 
                     <Link to="/community">
                       <FooterLinkHref>Community</FooterLinkHref>
+                    </Link>
+                    <Link to="/expore">
+                      <FooterLinkHref>Musing</FooterLinkHref>
                     </Link>
                   </FooterLink>
                 </FooterLinkCover>
