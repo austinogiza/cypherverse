@@ -7,4 +7,7 @@ export const CypherTheme = {
   black: "#000",
   red: "#ff0000",
   cardBG: "#161616",
+  modalBG: "#171719",
+  orangeDark: "rgb(246, 133, 27)",
+  blueLight: " rgb(59, 153, 252)",
 }

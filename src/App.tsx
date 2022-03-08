@@ -7,11 +7,14 @@ import Translator from "pages/Translator"
 import PageTransition from "components/PageTransition"
 import "react-toastify/dist/ReactToastify.css"
 import gsap from "gsap"
+import BookModal from "components/BookModal"
+
 const Home = lazy(() => import(/* webpackPrefetch:true */ "pages/Home"))
 const About = lazy(() => import(/* webpackPrefetch:true */ "pages/About"))
 const Community = lazy(
   () => import(/* webpackPrefetch:true */ "pages/Community")
 )
+const NFT = lazy(() => import(/* webpackPrefetch:true */ "pages/NFT"))
 const Explore = lazy(() => import(/* webpackPrefetch:true */ "pages/Explore"))
 const Legends = lazy(() => import(/* webpackPrefetch:true */ "pages/Legends"))
 const ErrorPage = lazy(() => import(/* webpackPrefetch:true */ "pages/404"))
@@ -32,6 +35,8 @@ const App = () => {
               <Route path="/community" element={<Community />} />
               <Route path="/legends" element={<Legends />} />
               <Route path="/explore" element={<Explore />} />
+              <Route path="/book" element={<BookModal />} />
+              <Route path="/nft" element={<NFT />} />
               <Route path="/translator" element={<Translator />} />
 
               <Route path="*" element={<ErrorPage />} />

@@ -1,21 +1,29 @@
+import React, { FC, MouseEvent, useState, useEffect } from "react"
 import styled from "styled-components"
 import { Link, useLocation } from "react-router-dom"
 import logo from "assets/logo.svg"
-
 import { CypherTheme } from "styles/ColorStyles"
-import React, { FC, MouseEvent, useState, useEffect } from "react"
-
-import { CustomLang } from "styles/TextStyles"
+import { MdOutlineLogout } from "react-icons/md"
+import { Body3, CustomLang } from "styles/TextStyles"
 
 interface NavbarProps {
   toggle?: boolean | any
   color?: any
+  activeAccount?: boolean
+  currentAccount?: string
+  connectWallet?: () => void
+  disconnectActiveAccount?: () => void
 }
 
 const Navbar: FC<NavbarProps> = (props) => {
   const router = useLocation()
 
-  // const { toggle } = props;
+  const {
+    connectWallet,
+    currentAccount,
+    activeAccount,
+    disconnectActiveAccount,
+  } = props
   const [menu, setMenu] = useState<boolean>(false)
 
   const [loading, setLoading] = useState<boolean>(false)
@@ -54,18 +62,38 @@ const Navbar: FC<NavbarProps> = (props) => {
       <Head>
         <Nav>
           <NavLink to="/">
-            {router.pathname === "/" ? null : (
-              <>
-                <LogoImage src={logo} alt="cypherverse logo" />
-              </>
-            )}
-          </NavLink>
-
-          <MenuBar onClick={handleToggle}>
-            <TopBar toggle={menu} />
-            <MiddleBar toggle={menu} />
-            <BottomBar toggle={menu} />
-          </MenuBar>
+            <>
+              <LogoImage src={logo} alt="cypherverse logo" />
+            </>
+          </NavLink>{" "}
+          {router.pathname === "/nft" ? (
+            <>
+              {activeAccount ? (
+                <>
+                  <ConnectWallet onClick={disconnectActiveAccount}>
+                    <ConnectText>{`${currentAccount?.slice(
+                      0,
+                      5
+                    )}...${currentAccount?.slice(38)}`}</ConnectText>
+                    <DisconnectAccount />
+                  </ConnectWallet>
+                </>
+              ) : (
+                <>
+                  {" "}
+                  <ConnectWallet onClick={connectWallet}>
+                    <ConnectText>Connect Wallet</ConnectText>
+                  </ConnectWallet>
+                </>
+              )}
+            </>
+          ) : (
+            <MenuBar onClick={handleToggle}>
+              <TopBar toggle={menu} />
+              <MiddleBar toggle={menu} />
+              <BottomBar toggle={menu} />
+            </MenuBar>
+          )}
         </Nav>
 
         <NavMenu toggle={menu}>
@@ -213,5 +241,30 @@ const NavMenu = styled.div<NavbarProps>`
 `
 
 const Lang = styled(CustomLang)``
+const ConnectWallet = styled.button`
+  height: 48px;
+  max-width: 200px;
+  width: 100%;
+  border-radius: 0px;
+  padding: 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  background: transparent;
+  cursor: pointer;
+`
+const ConnectText = styled(Body3)`
+  color: ${CypherTheme.white};
+  font-weight: 600;
+`
 
+const DisconnectAccount = styled(MdOutlineLogout)`
+  height: 28px;
+  width: 28px;
+  color: ${CypherTheme.white};
+  stroke: ${CypherTheme.white};
+  margin: 0 0 0 4px;
+`
 export default Navbar
