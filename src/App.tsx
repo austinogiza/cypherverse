@@ -14,8 +14,9 @@ const About = lazy(() => import(/* webpackPrefetch:true */ "pages/About"))
 const Community = lazy(
   () => import(/* webpackPrefetch:true */ "pages/Community")
 )
-const NFT = lazy(() => import(/* webpackPrefetch:true */ "pages/NFT"))
+
 const Explore = lazy(() => import(/* webpackPrefetch:true */ "pages/Explore"))
+const NFT = lazy(() => import(/* webpackPrefetch:true */ "pages/NFT"))
 const Legends = lazy(() => import(/* webpackPrefetch:true */ "pages/Legends"))
 const ErrorPage = lazy(() => import(/* webpackPrefetch:true */ "pages/404"))
 const App = () => {
@@ -35,7 +36,6 @@ const App = () => {
               <Route path="/community" element={<Community />} />
               <Route path="/legends" element={<Legends />} />
               <Route path="/explore" element={<Explore />} />
-              <Route path="/book" element={<BookModal />} />
               <Route path="/meru-36" element={<NFT />} />
               <Route path="/translator" element={<Translator />} />
 

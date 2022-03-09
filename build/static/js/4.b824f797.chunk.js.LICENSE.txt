@@ -5,17 +5,6 @@ object-assign
 */
 
 /*!
-   * Sizzle CSS Selector Engine v2.2.1
-   * http://sizzlejs.com/
-   *
-   * Copyright jQuery Foundation and other contributors
-   * Released under the MIT license
-   * http://jquery.org/license
-   *
-   * Date: 2015-10-17
-   */
-
-/*!
  * CSSPlugin 3.9.1
  * https://greensock.com
  *
@@ -34,20 +23,6 @@ object-assign
  * Club GreenSock members, the agreement issued with that membership.
  * @author: Jack Doyle, jack@greensock.com
 */
-
-/*!
- * jQuery JavaScript Library v1.12.0
- * http://jquery.com/
- *
- * Includes Sizzle.js
- * http://sizzlejs.com/
- *
- * Copyright jQuery Foundation and other contributors
- * Released under the MIT license
- * http://jquery.org/license
- *
- * Date: 2016-01-08T19:56Z
- */
 
 /**
  * React Router DOM v6.0.2
