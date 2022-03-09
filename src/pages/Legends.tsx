@@ -31,7 +31,7 @@ const Legends: FC = () => {
                 the rise of the Centopoly. The book also provides a glimpse into
                 the minds and hearts of the nano-engineered warriors who fought
                 the Synthetic War’s final engagement: The Battle of Meru-36.
-                Join the Legends of Cypher Discord for Updates
+              
               </RowText>
 
               <Buttons>
