@@ -158,6 +158,21 @@ const NFT = () => {
     }
   }
 
+  connector.on("connect", (error, payload) => {
+    if (error) {
+      throw error
+    }
+
+    // Get updated accounts and chainId
+    const account = connector.accounts[0]
+
+    localStorage.setItem("userAddress", account)
+    setCurrentAccount(account)
+    setOpen(false)
+    setCurrentWallet("walletconnect")
+    localStorage.setItem("walletConnection", "walletconnect")
+  })
+
   connector.on("disconnect", (error, payload) => {
     if (error) {
       throw error

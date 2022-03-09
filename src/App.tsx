@@ -17,7 +17,7 @@ const Community = lazy(
 const Explore = lazy(() => import(/* webpackPrefetch:true */ "pages/Explore"))
 const NFT = lazy(() => import(/* webpackPrefetch:true */ "pages/NFT"))
 const Legends = lazy(() => import(/* webpackPrefetch:true */ "pages/Legends"))
-const Claim = lazy(() => import(/* webpackPrefetch:true */ "pages/BookClaim"))
+const Claim = lazy(() => import(/* webpackPrefetch:true */ "pages/NFTGallery"))
 const ErrorPage = lazy(() => import(/* webpackPrefetch:true */ "pages/404"))
 const App = () => {
   useEffect(() => {
@@ -37,7 +37,7 @@ const App = () => {
               <Route path="/legends" element={<Legends />} />
               <Route path="/explore" element={<Explore />} />
               <Route path="/meru-36" element={<NFT />} />
-              <Route path="/claim" element={<Claim />} />
+              <Route path="/nft-gallery" element={<Claim />} />
               <Route path="/translator" element={<Translator />} />
 
               <Route path="*" element={<ErrorPage />} />

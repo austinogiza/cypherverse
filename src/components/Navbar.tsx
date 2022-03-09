@@ -68,7 +68,7 @@ const Navbar: FC<NavbarProps> = (props) => {
               </>
             )}
           </NavLink>{" "}
-          {router.pathname === "/meru-36" || router.pathname === "/claim" ? (
+          {router.pathname === "/meru-36" ? (
             <>
               {activeAccount ? (
                 <>
