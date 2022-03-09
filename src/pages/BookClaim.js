@@ -31,60 +31,60 @@ const BookClaim = () => {
 
   const connectMetaMask = async () => {
     const { ethereum } = window
-    // if (ethereum) {
-    //   const accounts = await ethereum.request({
-    //     method: "eth_requestAccounts",
-    //   })
-    //   // Boom! This should print out public address once we authorize Metamask.
-    //   localStorage.setItem("userAddress", accounts[0])
-    //   setCurrentAccount(accounts[0])
-    //   setOpen(false)
-    //   setCurrentWallet("metamask")
-    //   localStorage.setItem("walletConnection", "metamask")
-    // } else {
-    //   alert("Kindly install meta mask")
-    // }
+    if (ethereum) {
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      })
+      // Boom! This should print out public address once we authorize Metamask.
+      localStorage.setItem("userAddress", accounts[0])
+      setCurrentAccount(accounts[0])
+      setOpen(false)
+      setCurrentWallet("metamask")
+      localStorage.setItem("walletConnection", "metamask")
+    } else {
+      alert("Kindly install meta mask")
+    }
   }
 
   const connectWalletConnect = () => {
     // Check if connection is already established
-    // if (!connector.connected) {
-    //   // create new session
-    //   connector.createSession()
-    // } else {
-    //   if (QRCodeModal.close()) {
-    //   }
-    //   const account = connector.accounts[0]
-    //   localStorage.setItem("userAddress", account)
-    //   setCurrentAccount(account)
-    //   setOpen(false)
-    //   setCurrentWallet("walletconnect")
-    //   localStorage.setItem("walletConnection", "walletconnect")
-    // }
-    // connector.on("connect", (error, payload) => {
-    //   if (error) {
-    //     throw error
-    //   }
-    //   // Get updated accounts and chainId
-    //   const account = connector.accounts[0]
-    //   localStorage.setItem("userAddress", account)
-    //   setCurrentAccount(account)
-    //   setOpen(false)
-    //   setCurrentWallet("walletconnect")
-    //   localStorage.setItem("walletConnection", "walletconnect")
-    // })
-    // connector.on("session_update", (error, payload) => {
-    //   if (error) {
-    //     throw error
-    //   }
-    //   // Get updated accounts and chainId
-    //   const account = connector.accounts[0]
-    //   localStorage.setItem("userAddress", account)
-    //   setCurrentAccount(account)
-    //   setOpen(false)
-    //   setCurrentWallet("walletconnect")
-    //   localStorage.setItem("walletConnection", "walletconnect")
-    // })
+    if (!connector.connected) {
+      // create new session
+      connector.createSession()
+    } else {
+      if (QRCodeModal.close()) {
+      }
+      const account = connector.accounts[0]
+      localStorage.setItem("userAddress", account)
+      setCurrentAccount(account)
+      setOpen(false)
+      setCurrentWallet("walletconnect")
+      localStorage.setItem("walletConnection", "walletconnect")
+    }
+    connector.on("connect", (error, payload) => {
+      if (error) {
+        throw error
+      }
+      // Get updated accounts and chainId
+      const account = connector.accounts[0]
+      localStorage.setItem("userAddress", account)
+      setCurrentAccount(account)
+      setOpen(false)
+      setCurrentWallet("walletconnect")
+      localStorage.setItem("walletConnection", "walletconnect")
+    })
+    connector.on("session_update", (error, payload) => {
+      if (error) {
+        throw error
+      }
+      // Get updated accounts and chainId
+      const account = connector.accounts[0]
+      localStorage.setItem("userAddress", account)
+      setCurrentAccount(account)
+      setOpen(false)
+      setCurrentWallet("walletconnect")
+      localStorage.setItem("walletConnection", "walletconnect")
+    })
   }
 
   const checkIfWalletIsConnected = async () => {

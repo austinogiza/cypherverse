@@ -11,8 +11,6 @@ import NFTBody from "components/nft/NFtBody"
 import NFTBottom from "components/nft/NFTBottom"
 
 const NFT = () => {
-  const { ethereum } = window
-
   const [currentAccount, setCurrentAccount] = useState(
     localStorage.getItem("userAddress") || ""
   )
@@ -34,9 +32,8 @@ const NFT = () => {
     }
   })
 
-  const detectProvider = () => {}
-
   const connectMetaMask = async () => {
+    const { ethereum } = window
     if (ethereum) {
       const accounts = await ethereum.request({
         method: "eth_requestAccounts",
@@ -142,9 +139,6 @@ const NFT = () => {
   //   console.log("balance", balance.toNumber())
   // }
 
-  ethereum.on("accountsChanged", function (accounts) {
-    // Time to reload your interface with accounts[0]!
-  })
   const disconnectAccount = async () => {
     const walletName = localStorage.getItem("walletConnection")
 
