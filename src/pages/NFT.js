@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import WalletModal from "components/model/WalletModal"
-
 import Navbar from "components/Navbar"
 import { isMobile } from "react-device-detect"
 import { ethers } from "ethers"
@@ -192,12 +191,12 @@ const NFT = () => {
   })
 
   useEffect(() => {
-    checkIfWalletIsConnected()
-    document.title = "NFT - Cypherverse"
-    // if (connectedAccount) {
-    //   checkNFTs()
-    // }
-  }, [connectedAccount, currentAccount, disconnectAccount])
+    if (!isMobile) {
+      checkIfWalletIsConnected()
+    }
+
+    document.title = "Meru NFT - Cypherverse"
+  }, [connectedAccount, currentAccount, isMobile, disconnectAccount])
 
   return (
     <>
