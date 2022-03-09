@@ -25,14 +25,14 @@ const NFTHero = () => {
     <>
       <Body>
         <Cover>
-          <video autoPlay={true}>
+          {/* <video autoPlay={true}>
             {!playing && (
               <PlayCover className="image_bg_gif">
                 <PlayButton onClick={() => videoHandler("play")} />
               </PlayCover>
             )}
             <source src={legend} type="video/mp4" />
-          </video>
+          </video> */}
           <Title>About Meru-36: Destiny’s Fall</Title>
           <RowText>
             With its AI allies, humanity settled the Cosmos. This period, known
