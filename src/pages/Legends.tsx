@@ -22,7 +22,19 @@ const Legends: FC = () => {
         <Cover>
           <img src={legend} alt="legend" />
           <Title>Legends of Cypher Lore</Title>
-          <SecondRow>
+          <MiddleText>
+            Legends of Cypher is a multimedia project that tells the story of a future human
+            civilization fighting for individual freedom. On one side is Hash and his “gift”, a
+            technology that can free humanity from bondage. Malarian, a high-ranking agent of the 
+            inter-planetary Centopoly empire, will stop at nothing to prevent Hash and his allies
+            from giving humanity its freedom. Our story will be presented in a series of comics that
+            will be released across multiple “seasons.”
+
+            Below you'll find currently released lore from the Legends of Cypher universe. In the        
+            future we will release the Legends of Cypher Wiki, which will feature additional lore   
+            developed by the Origin Group and the community. 
+            </MiddleText>           
+            <SecondRow>
             <SecondRowLeft>
               <GridTitle>Meru-36: Destiny’s Fall (Feb. 2022)</GridTitle>
               <RowText>
