@@ -36,7 +36,7 @@ const App = () => {
               <Route path="/legends" element={<Legends />} />
               <Route path="/explore" element={<Explore />} />
               <Route path="/book" element={<BookModal />} />
-              <Route path="/nft" element={<NFT />} />
+              <Route path="/meru-36" element={<NFT />} />
               <Route path="/translator" element={<Translator />} />
 
               <Route path="*" element={<ErrorPage />} />

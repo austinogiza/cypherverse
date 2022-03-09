@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   const router = useLocation()
   return (
     <React.Fragment>
-      {router.pathname === "/nft" ? null : <Navbar />}
+      {router.pathname === "/meru-36" ? null : <Navbar />}
 
       <ToastContainer
         position="top-right"

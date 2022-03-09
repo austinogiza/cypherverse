@@ -26,7 +26,7 @@ const HomeHero = () => {
               <DiscordButton to="/legends">
                 <p>Read the Story</p>
               </DiscordButton>{" "}
-              <TwitterButton to="/nft">
+              <TwitterButton to="/meru-36">
                 <p>Buy the NFT </p>
               </TwitterButton>
             </Buttons>{" "}

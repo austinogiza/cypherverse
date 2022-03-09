@@ -201,7 +201,7 @@ const NFT = () => {
       />
       <NFTHero />
       <NFTBody />
-      <NFTBottom />
+      <NFTBottom activeAccount={connectedAccount} />
     </>
   )
 }

@@ -1,10 +1,14 @@
-import React from "react"
+import React, { FC } from "react"
 import styled from "styled-components"
 import { CypherTheme } from "styles/ColorStyles"
 import { Body3, Header2 } from "styles/TextStyles"
 import meru from "assets/images/merunew.png"
 import pdf from "assets/pdf/meru-36.pdf"
-const NFTBottom = () => {
+interface NFtprops {
+  activeAccount?: boolean
+}
+const NFTBottom: FC<NFtprops> = (props) => {
+  const { activeAccount } = props
   return (
     <Body>
       <Cover>
@@ -24,9 +28,11 @@ const NFTBottom = () => {
               >
                 <p>ORDER YOUR COPY</p>
               </DiscordButton>{" "}
-              <TwitterButton href={pdf} rel="noopener noreferrer" download>
-                <p>DOWNLOAD PDF </p>
-              </TwitterButton>
+              {activeAccount && (
+                <TwitterButton href={pdf} rel="noopener noreferrer" download>
+                  <p>DOWNLOAD PDF </p>
+                </TwitterButton>
+              )}{" "}
             </Buttons>{" "}
           </SecondRowLeft>
           <SecondRowRight>

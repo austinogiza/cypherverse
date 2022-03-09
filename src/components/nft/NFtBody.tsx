@@ -17,6 +17,7 @@ const NFTBody = () => {
               slug={data.slug}
               image={data.image}
               page={data.page}
+              external={data.external}
             />
           ))}
         </CardsRow>

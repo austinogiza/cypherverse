@@ -32,7 +32,7 @@ const HomeBody = () => {
               stories, films, music, and art across a variety of mediums.
             </RowText>{" "}
             <Buttons>
-              <DiscordButton to="/legends">
+              <DiscordButton to="/about">
                 <p>LoC Seasons</p>
               </DiscordButton>
             </Buttons>

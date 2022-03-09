@@ -68,7 +68,7 @@ const Navbar: FC<NavbarProps> = (props) => {
               </>
             )}
           </NavLink>{" "}
-          {router.pathname === "/nft" ? (
+          {router.pathname === "/meru-36" ? (
             <>
               {activeAccount ? (
                 <>
@@ -109,7 +109,7 @@ const Navbar: FC<NavbarProps> = (props) => {
               <li>{loading ? "COMMUNITY" : <Lang>COMMUNITY</Lang>} </li>
             </Link>
             <Link to="/explore">
-              <li>{loading ? "MUSING" : <Lang>MUSING</Lang>} </li>
+              <li>{loading ? "MUSINGS" : <Lang>MUSINGS</Lang>} </li>
             </Link>
           </ul>
         </NavMenu>

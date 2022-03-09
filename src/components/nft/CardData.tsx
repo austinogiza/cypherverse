@@ -5,13 +5,13 @@ export const nftCardData = [
   {
     image: lor,
     slug: "",
-
+    external: false,
     page: "READ MERU-36",
   },
   {
     image: nfts,
-    slug: "",
-
-    page: "READ MERU-36",
+    slug: "https://rarible.com/token/0x58e4e5c0d245cda9d984c76d71ae23e030c7b5cf:1?tab=owners",
+    external: true,
+    page: "Buy the NFT",
   },
 ]

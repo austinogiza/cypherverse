@@ -42,7 +42,7 @@ const Legends: FC = () => {
                 >
                   <p>READ BOOK FOR FREE</p>
                 </DiscordButton>{" "}
-                <TwitterButton to="/nft">
+                <TwitterButton to="/meru-36">
                   <p>BUY MERU-36 NFT </p>
                 </TwitterButton>
               </Buttons>

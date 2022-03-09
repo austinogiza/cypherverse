@@ -36,7 +36,7 @@ const Footer: FC = () => {
                       <FooterLinkHref>Community</FooterLinkHref>
                     </Link>
                     <Link to="/expore">
-                      <FooterLinkHref>Musing</FooterLinkHref>
+                      <FooterLinkHref>Musings</FooterLinkHref>
                     </Link>
                   </FooterLink>
                 </FooterLinkCover>

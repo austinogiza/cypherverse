@@ -12,7 +12,7 @@ export const cardData = [
   },
   {
     image: nfts,
-    slug: "/nft",
+    slug: "/meru-36",
     external: false,
     hashtag: "#NFT’s",
     text: "Own a piece of the Universe!...Learn about new and upcoming NFTs",
@@ -20,8 +20,8 @@ export const cardData = [
   },
   {
     image: commu,
-    slug: "https://discord.gg/hJmfsEYCqE",
-    external: true,
+    slug: "/community",
+    external: false,
     hashtag: "#Community",
     text: "Help Shape the future of the universe!",
     page: "Community",

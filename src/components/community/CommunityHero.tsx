@@ -13,11 +13,14 @@ const CommunityHero: FC = () => {
             <ImageComp src={community} alt="legend" />
           </ImageCompCover>
           <Title>
-            The Legends of Cypher project is a transmedia storytelling
-            experience that aims to create a rich and deep universe with
-            participation and engagement from a global community of artists,
-            musicians, authors, poets, sci-fi enthusiasts, armchair
-            philosophers, academics, NFT collectors, role players and others.
+            Legends of Cypher is a multimedia project that tells the story of a
+            future human civilization fighting for individual freedom. On one
+            side is Hash and his “gift”, a technology that can free humanity
+            from bondage. Malarian, a high-ranking agent of the inter-planetary
+            Centopoly empire, will stop at nothing to prevent Hash and his
+            allies from giving humanity its freedom. Our story will be presented
+            in a series of comics that will be released across multiple
+            “seasons.”
           </Title>
 
           <Title>
