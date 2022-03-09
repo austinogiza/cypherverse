@@ -142,19 +142,6 @@ const NFT = () => {
   //   console.log("balance", balance.toNumber())
   // }
 
-  // const checkNFTs = async () => {
-
-  //   const provider = new ethers.providers.Web3Provider(ethereum)
-  //   const signer = provider.getSigner()
-
-  //   const contract = new ethers.Contract(, contractABI, signer) // create instance
-
-  //   // const res = await contract.balanceOf(JSON.stringify(currentAccount)) // read from the contract
-  //   // console.log(res.toString()) // convert from BigNumber to string}
-  //   // let decimals
-  //   // const pow = new BigNumber("10").pow(new BigNumber(decimals))
-  //   // web3BalanceConvert()
-  // }
   ethereum.on("accountsChanged", function (accounts) {
     // Time to reload your interface with accounts[0]!
   })
