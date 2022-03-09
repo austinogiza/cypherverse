@@ -10,4 +10,5 @@ export const CypherTheme = {
   modalBG: "#171719",
   orangeDark: "rgb(246, 133, 27)",
   blueLight: " rgb(59, 153, 252)",
+  disabled: "#565656",
 }

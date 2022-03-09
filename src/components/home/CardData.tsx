@@ -7,7 +7,7 @@ export const cardData = [
     slug: "/legends",
     hashtag: "#StoryFirst",
     external: false,
-    text: "Dive into the universe!",
+    text: "Dive into the Universe!",
     page: "Lore",
   },
   {
@@ -15,7 +15,7 @@ export const cardData = [
     slug: "/meru-36",
     external: false,
     hashtag: "#NFT’s",
-    text: "Own a piece of the Universe!...Learn about new and upcoming NFTs",
+    text: "Own a piece of the Universe! Learn about new and upcoming NFTs",
     page: "NFTs",
   },
   {
@@ -23,7 +23,7 @@ export const cardData = [
     slug: "/community",
     external: false,
     hashtag: "#Community",
-    text: "Help Shape the future of the universe!",
+    text: "Help shape the future of the Universe!",
     page: "Community",
   },
 ]

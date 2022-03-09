@@ -7,34 +7,45 @@ import orb from "assets/images/orb.png"
 import central from "assets/images/central.png"
 import { Header3, Header4, Body3, Header7, Body1 } from "styles/TextStyles"
 
-import React, { FC, useEffect } from "react"
+import React, { FC, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 import Substack from "components/Substack"
+import PDFModal from "components/pdf/PDFModal"
 
 const Legends: FC = () => {
+  const [open, setOpen] = useState<boolean>(false)
   useEffect(() => {
     document.title = "Legends - Cypherverse"
   }, [])
+
+  const openModal = () => {
+    setOpen(true)
+  }
+  const closeModal = () => {
+    setOpen(false)
+  }
   return (
     <>
+      <PDFModal closeModal={closeModal} showModal={open} />
       <Body>
         <Cover>
           <img src={legend} alt="legend" />
           <Title>Legends of Cypher Lore</Title>
           <MiddleText>
-            Legends of Cypher is a multimedia project that tells the story of a future human
-            civilization fighting for individual freedom. On one side is Hash and his “gift”, a
-            technology that can free humanity from bondage. Malarian, a high-ranking agent of the 
-            inter-planetary Centopoly empire, will stop at nothing to prevent Hash and his allies
-            from giving humanity its freedom. Our story will be presented in a series of comics that
-            will be released across multiple “seasons.”
-
-            Below you'll find currently released lore from the Legends of Cypher universe. In the        
-            future we will release the Legends of Cypher Wiki, which will feature additional lore   
-            developed by the Origin Group and the community. 
-            </MiddleText>           
-            <SecondRow>
+            Legends of Cypher is a multimedia project that tells the story of a
+            future human civilization fighting for individual freedom. On one
+            side is Hash and his “gift”, a technology that can free humanity
+            from bondage. Malarian, a high-ranking agent of the inter-planetary
+            Centopoly empire, will stop at nothing to prevent Hash and his
+            allies from giving humanity its freedom. Our story will be presented
+            in a series of comics that will be released across multiple
+            “seasons.” Below you'll find currently released lore from the
+            Legends of Cypher universe. In the future we will release the
+            Legends of Cypher Wiki, which will feature additional lore developed
+            by the Origin Group and the community.
+          </MiddleText>
+          <SecondRow>
             <SecondRowLeft>
               <GridTitle>Meru-36: Destiny’s Fall (Feb. 2022)</GridTitle>
               <RowText>
@@ -43,15 +54,10 @@ const Legends: FC = () => {
                 the rise of the Centopoly. The book also provides a glimpse into
                 the minds and hearts of the nano-engineered warriors who fought
                 the Synthetic War’s final engagement: The Battle of Meru-36.
-              
               </RowText>
 
               <Buttons>
-                <DiscordButton
-                  href="https://discord.gg/hJmfsEYCqE"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <DiscordButton onClick={openModal}>
                   <p>READ BOOK FOR FREE</p>
                 </DiscordButton>{" "}
                 <TwitterButton to="/meru-36">
@@ -226,7 +232,7 @@ const Buttons = styled.div`
     align-items: center;
   }
 `
-const DiscordButton = styled.a`
+const DiscordButton = styled.button`
   height: 58px;
   width: 230px;
   background: ${CypherTheme.white};
@@ -239,7 +245,7 @@ const DiscordButton = styled.a`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
+  border: none;
   line-height: 1.2;
   :hover {
     opacity: 0.9;

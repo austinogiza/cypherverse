@@ -25,25 +25,26 @@ const NFTHero = () => {
     <>
       <Body>
         <Cover>
-          {/* <video autoPlay={true}>
+          <video autoPlay={true}>
             {!playing && (
               <PlayCover className="image_bg_gif">
                 <PlayButton onClick={() => videoHandler("play")} />
               </PlayCover>
             )}
             <source src={legend} type="video/mp4" />
-          </video> */}
+          </video>
           <Title>About Meru-36: Destiny’s Fall</Title>
           <RowText>
             With its AI allies, humanity settled the Cosmos. This period, known
             as the Great Diaspora era, was a time of peace and prosperity. But
             progress came at a cost: humankind became too reliant on AI and lost
             its freedom to its machine overseers. But one group of machines
-            decided to fight back. <br /> These AIs, along with their human and
-            post-human allies, fought the nine-decade “Synthetic War”. Meru-36:
-            Destiny’s Fall tells the tale of the war and its final
-            Cosmos-changing battle, which contributed to the rise of the
-            Centopoly empire.
+            decided to fight back. <br /> <br />
+            These AIs, along with their human and post-human allies, fought the
+            nine-decade “Synthetic War”. Meru-36: Destiny’s Fall tells the tale
+            of the war and its final Cosmos-changing battle, which contributed
+            to the rise of the Centopoly empire, the main antagonist of Legends
+            of Cypher Season One.
           </RowText>
         </Cover>
       </Body>
