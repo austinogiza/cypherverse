@@ -25,11 +25,9 @@ const Season = () => {
             Key Season One Lore Drops
             <ul>
               <li>
-                Short Story - Meru-36: Destiny’s Fall: This short story tells of
-                events that took place thousands of years before the “present
-                day” of the Legends of Cypher universe. The Synthetic War was a
-                clash between two factions of AIs that led directly to the rise
-                of the Centopoly, the main antagonist of our story.
+                Short Film: Prelude to the Quest for the Bridge Tech: Short 
+                animated film featuring a clash between Hash and Malarian 
+                and the introduction of Legends of Cypher factions. 
               </li>
               <li>
                 Legends of Cypher Season One Comics: A series of comics telling

@@ -26,6 +26,7 @@ const About: FC = () => {
                 humanity from bondage. Malarian, a high-ranking agent of the
                 inter-planetary Centopoly empire, will stop at nothing to
                 prevent Hash and his allies from giving humanity its freedom.
+                
                 Our story will be presented in a series of comics that will be
                 released across multiple “seasons.” Fans will be able to collect
                 artifacts from the Legends of Cypher universe via NFTs, short
