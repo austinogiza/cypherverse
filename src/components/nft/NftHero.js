@@ -1,5 +1,5 @@
 import styled from "styled-components"
-
+import ReactPlayer from "react-player"
 import legend from "assets/videos/trailer.mp4"
 import { CypherTheme } from "styles/ColorStyles"
 import { Header3, Body3 } from "styles/TextStyles"
@@ -11,6 +11,7 @@ const NFTHero = () => {
   const videoRef = useRef(null)
   const autoPlayVideo = () => {
     videoRef.current.play()
+    setPlaying(true)
   }
   const videoHandler = (control) => {
     if (control === "play") {
@@ -22,27 +23,30 @@ const NFTHero = () => {
     }
   }
 
-  useEffect(() => {
-    autoPlayVideo()
-  }, [])
+  useEffect(() => {}, [])
   return (
     <>
       <Body>
         <Cover>
-          <video
-            autoPlay={true}
-            ref={videoRef}
-            controls={false}
-            volume={1}
-            muted={false}
-          >
+          <VideoWrapper>
             {!playing && (
               <PlayCover className="image_bg_gif">
                 <PlayButton onClick={() => videoHandler("play")} />
               </PlayCover>
             )}
-            <source src={legend} type="video/mp4" />
-          </video>
+
+            <video
+              autoPlay
+              playing={playing}
+              onReady={autoPlayVideo}
+              src={legend}
+              volume={1}
+              muted={false}
+              controls={true}
+              ref={videoRef}
+            />
+          </VideoWrapper>
+
           <Title>About Meru-36: Destiny’s Fall</Title>
           <RowText>
             With its AI allies, humanity settled the Cosmos. This period, known
@@ -81,14 +85,6 @@ const Cover = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  video {
-    max-height: 653px;
-    min-height: 250px;
-    height: 100%;
-    width: 100%;
-    max-width: 1312px;
-    object-fit: contain;
-  }
 `
 
 const RowText = styled(Body3)`
@@ -103,6 +99,28 @@ const Title = styled(Header3)`
   text-align: center;
   @media only screen and (max-width: 700px) {
     text-align: left;
+  }
+`
+
+const VideoWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 653px;
+  max-width: 1312px;
+  margin: 0 auto;
+  @media only screen and (max-width: 700px) {
+    height: 280px;
+  }
+
+  video {
+    max-height: 653px;
+    min-height: 250px;
+    height: 100%;
+    position: relative;
+    z-index: 40;
+    width: 100%;
+    max-width: 1312px;
+    object-fit: contain;
   }
 `
 
