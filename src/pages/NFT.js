@@ -29,8 +29,12 @@ const NFT = () => {
         rpc: {
           1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
         },
+        network: "ethereum",
+        chainId: 1,
         bridge: "https://bridge.walletconnect.org",
       })
+      connector.networkId = 1
+      connector.updateRpcUrl(1)
       const web3Provider = new providers.Web3Provider(connector)
       let provider = web3Provider
       return provider
@@ -47,14 +51,12 @@ const NFT = () => {
     rpc: {
       1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
     },
+    chainId: 1,
+    network: "ethereum",
     bridge: "https://bridge.walletconnect.org",
   })
-  connector.on("session_update", (error, payload) => {
-    if (error) {
-      throw error
-    }
-  })
-
+  connector.networkId = 1
+  connector.updateRpcUrl(1)
   const connectMetaMask = async () => {
     const { ethereum } = window
     if (ethereum) {
@@ -77,18 +79,20 @@ const NFT = () => {
   }
 
   const connectWalletConnect = async () => {
-    // Check if connection is already established
-
     const connector = new WalletConnectProvider({
       rpc: {
         1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
+        //56: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
       },
-      bridge: "https://bridge.walletconnect.org",
     })
 
     //  Enable session (triggers QR Code modal)
-    console.log(connector.qrcodeModal)
+
     await connector.enable()
+
+    connector.on("error", (error) => {
+      console.log(error)
+    })
 
     connector.on("accountsChanged", (accounts) => {
       console.log(accounts)

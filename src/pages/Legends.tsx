@@ -46,7 +46,7 @@ const Legends: FC = () => {
           </TopCover>
           <SecondRow>
             <SecondRowLeft>
-              <GridTitle>Meru-36: Destiny’s Fall (Feb. 2022)</GridTitle>
+              <GridTitle>Meru-36: Destiny’s Fall</GridTitle>
               <RowText>
                 Meru-36: Destiny’s Fall features vital historical information
                 about the Synthetic War, which takes place millennia prior to
