@@ -88,7 +88,7 @@ const NFT = () => {
 
       //   // Get updated accounts and chainId
 
-      const account = connector.accounts[0]
+      const account = accounts[0]
 
       localStorage.setItem("userAddress", account)
       setCurrentAccount(account)
@@ -96,19 +96,28 @@ const NFT = () => {
       setCurrentWallet("walletconnect")
       localStorage.setItem("walletConnection", "walletconnect")
     })
-
-    connector.on("connect", (code, accounts) => {
-      // Get updated accounts and chainId
-      console.log(accounts)
+    connector.on("disconnect", (code, reason) => {
+      console.log(code, reason)
       console.log(connector)
-      const account = connector.accounts[0]
-
-      localStorage.setItem("userAddress", account)
-      setCurrentAccount(account)
-      setOpen(false)
-      setCurrentWallet("walletconnect")
-      localStorage.setItem("walletConnection", "walletconnect")
+      // Delete connector
+      localStorage.removeItem("userAddress")
+      localStorage.removeItem("walletConnection")
+      setCurrentAccount(null)
+      localStorage.removeItem("walletconnect")
+      setConnectedAccount(false)
     })
+    // connector.on("connect", (code, accounts) => {
+    //   // Get updated accounts and chainId
+    //   console.log(accounts)
+    //   console.log(connector)
+    //   const account = connector.accounts[0]
+
+    //   localStorage.setItem("userAddress", account)
+    //   setCurrentAccount(account)
+    //   setOpen(false)
+    //   setCurrentWallet("walletconnect")
+    //   localStorage.setItem("walletConnection", "walletconnect")
+    // })
   }
 
   const checkIfWalletIsConnected = async () => {
@@ -168,9 +177,23 @@ const NFT = () => {
     }
   }
 
-  connector.on("connect", (code, accounts) => {
-    // Get updated accounts and chainId
-    const account = connector.accounts[0]
+  // connector.on("connect", (code, accounts) => {
+  //   // Get updated accounts and chainId
+  //   const account = connector.accounts[0]
+
+  //   localStorage.setItem("userAddress", account)
+  //   setCurrentAccount(account)
+  //   setOpen(false)
+  //   setCurrentWallet("walletconnect")
+  //   localStorage.setItem("walletConnection", "walletconnect")
+  // })
+
+  connector.on("accountsChanged", (accounts) => {
+    console.log(accounts)
+
+    //   // Get updated accounts and chainId
+
+    const account = accounts[0]
 
     localStorage.setItem("userAddress", account)
     setCurrentAccount(account)
@@ -178,10 +201,8 @@ const NFT = () => {
     setCurrentWallet("walletconnect")
     localStorage.setItem("walletConnection", "walletconnect")
   })
-
   connector.on("disconnect", (code, reason) => {
     console.log(code, reason)
-
     console.log(connector)
     // Delete connector
     localStorage.removeItem("userAddress")
