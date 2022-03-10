@@ -29,9 +29,6 @@ const NFT = () => {
         rpc: {
           1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
         },
-        network: "ethereum",
-        chainId: 1,
-        bridge: "https://bridge.walletconnect.org",
       })
       connector.networkId = 1
       connector.updateRpcUrl(1)
@@ -51,9 +48,6 @@ const NFT = () => {
     rpc: {
       1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
     },
-    chainId: 1,
-    network: "ethereum",
-    bridge: "https://bridge.walletconnect.org",
   })
   connector.networkId = 1
   connector.updateRpcUrl(1)
@@ -82,17 +76,12 @@ const NFT = () => {
     const connector = new WalletConnectProvider({
       rpc: {
         1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
-        //56: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
       },
     })
 
     //  Enable session (triggers QR Code modal)
 
     await connector.enable()
-
-    connector.on("error", (error) => {
-      console.log(error)
-    })
 
     connector.on("accountsChanged", (accounts) => {
       console.log(accounts)
@@ -108,8 +97,10 @@ const NFT = () => {
       localStorage.setItem("walletConnection", "walletconnect")
     })
 
-    connector.on("connect", (code, reason) => {
+    connector.on("connect", (code, accounts) => {
       // Get updated accounts and chainId
+      console.log(accounts)
+      console.log(connector)
       const account = connector.accounts[0]
 
       localStorage.setItem("userAddress", account)
@@ -177,11 +168,7 @@ const NFT = () => {
     }
   }
 
-  connector.on("connect", (error, payload) => {
-    if (error) {
-      throw error
-    }
-
+  connector.on("connect", (code, accounts) => {
     // Get updated accounts and chainId
     const account = connector.accounts[0]
 
@@ -194,6 +181,8 @@ const NFT = () => {
 
   connector.on("disconnect", (code, reason) => {
     console.log(code, reason)
+
+    console.log(connector)
     // Delete connector
     localStorage.removeItem("userAddress")
     localStorage.removeItem("walletConnection")
