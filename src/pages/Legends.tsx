@@ -19,9 +19,6 @@ const Legends: FC = () => {
     document.title = "Legends - Cypherverse"
   }, [])
 
-  const openModal = () => {
-    setOpen(true)
-  }
   const closeModal = () => {
     setOpen(false)
   }

@@ -23,7 +23,11 @@ const HomeHero = () => {
               </ul>
             </RowText>
             <Buttons>
-              <DiscordButton to="/legends">
+              <DiscordButton
+                href="https://legendsofcypherpdf.netlify.app/deploy/meru-36-web.html"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <p>Read the Story</p>
               </DiscordButton>{" "}
               <TwitterButton to="/meru-36">
@@ -142,7 +146,7 @@ const Buttons = styled.div`
     align-items: center;
   }
 `
-const DiscordButton = styled(Link)`
+const DiscordButton = styled.a`
   height: 58px;
   width: 190px;
   background: ${CypherTheme.white};
