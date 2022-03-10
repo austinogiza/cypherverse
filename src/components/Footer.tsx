@@ -31,11 +31,13 @@ const Footer: FC = () => {
                     <Link to="/legends">
                       <FooterLinkHref>Legends</FooterLinkHref>
                     </Link>
-
+                    <Link to="/nft-gallery">
+                      <FooterLinkHref>NFTs</FooterLinkHref>
+                    </Link>
                     <Link to="/community">
                       <FooterLinkHref>Community</FooterLinkHref>
                     </Link>
-                    <Link to="/expore">
+                    <Link to="/explore">
                       <FooterLinkHref>Musings</FooterLinkHref>
                     </Link>
                   </FooterLink>

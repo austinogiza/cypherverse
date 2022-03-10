@@ -22,7 +22,7 @@ const NFTBottom: FC<NFtprops> = (props) => {
             </RowText>
             <Buttons>
               <DiscordButton disabled>
-                <p>Coming Soon</p>
+                <p>Order Book: Coming Soon</p>
               </DiscordButton>{" "}
               {activeAccount && (
                 <TwitterButton href={pdf} rel="noopener noreferrer" download>

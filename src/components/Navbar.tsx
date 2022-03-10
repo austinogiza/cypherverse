@@ -105,6 +105,9 @@ const Navbar: FC<NavbarProps> = (props) => {
             <Link to="/legends">
               <li>{loading ? "LEGENDS" : <Lang>LEGENDS</Lang>}</li>
             </Link>
+            <Link to="/nft-gallery">
+              <li>{loading ? "NFTs" : <Lang>NFTs</Lang>}</li>
+            </Link>
             <Link to="/community">
               <li>{loading ? "COMMUNITY" : <Lang>COMMUNITY</Lang>} </li>
             </Link>
