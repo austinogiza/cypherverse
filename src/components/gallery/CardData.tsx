@@ -5,8 +5,8 @@ import conclave from "assets/images/conclave.png"
 export const nftCardData = [
   {
     image: nfts,
-    slug: "https://rarible.com/token/0x58e4e5c0d245cda9d984c76d71ae23e030c7b5cf:1?tab=owners",
-    external: true,
+    slug: "meru-36",
+    external: false,
     page: "Buy the NFT",
     coming: false,
     hashtag: "Meru-36: Destiny’s Fall Animated Cover",

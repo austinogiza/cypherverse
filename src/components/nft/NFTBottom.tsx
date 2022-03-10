@@ -21,12 +21,8 @@ const NFTBottom: FC<NFtprops> = (props) => {
               NFT to order a copy of the Meru-36 limited edition paperback
             </RowText>
             <Buttons>
-              <DiscordButton
-                href="https://discord.gg/hJmfsEYCqE"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p>ORDER YOUR COPY</p>
+              <DiscordButton disabled>
+                <p>Coming Soon</p>
               </DiscordButton>{" "}
               {activeAccount && (
                 <TwitterButton href={pdf} rel="noopener noreferrer" download>
@@ -137,7 +133,7 @@ const Buttons = styled.div`
     align-items: center;
   }
 `
-const DiscordButton = styled.a`
+const DiscordButton = styled.button`
   height: 58px;
   width: 190px;
   background: ${CypherTheme.white};
@@ -150,13 +146,17 @@ const DiscordButton = styled.a`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
+  border: none;
   line-height: 1.2;
   :hover {
     opacity: 0.9;
     transform: scale(1.02);
   }
-
+  :disabled {
+    cursor: not-allowed;
+    background: ${CypherTheme.disabled};
+    color: ${CypherTheme.white} !important;
+  }
   p {
     margin: 0;
     font-family: "Atures";

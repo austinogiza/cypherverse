@@ -4,6 +4,7 @@ import { CypherTheme } from "styles/ColorStyles"
 import styled from "styled-components"
 
 import { Body2 } from "styles/TextStyles"
+import { Link } from "react-router-dom"
 
 interface CardProps {
   image: string
@@ -35,9 +36,15 @@ const GalleryCards: FC<CardProps> = (props) => {
         ) : (
           <>
             {" "}
-            <CardButton disabled={disabled}>
-              <p>{page}</p>
-            </CardButton>
+            {disabled ? (
+              <DisabledCardButton disabled={disabled}>
+                <p>{page}</p>
+              </DisabledCardButton>
+            ) : (
+              <CardButton to={`/${slug}`}>
+                <p>{page}</p>
+              </CardButton>
+            )}
           </>
         )}
       </Cover>
@@ -79,7 +86,7 @@ const CardText = styled(Body2)`
   font-weight: 600 !important;
   margin: 8px auto;
 `
-const CardButton = styled.button`
+const CardButton = styled(Link)`
   height: 58px;
   width: 190px;
   margin: 24px 0 0 0;
@@ -116,7 +123,43 @@ const CardButton = styled.button`
     }
   }
 `
+const DisabledCardButton = styled.button`
+  height: 58px;
+  width: 190px;
+  margin: 24px 0 0 0;
+  background: ${CypherTheme.white};
+  outline: none;
+  transition: 0.4s cubic-bezier(0.12, 0.73, 0.92, 0.34);
+  border-radius: 0px;
+  color: ${CypherTheme.primary};
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  line-height: 1.2;
 
+  :hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+  :disabled {
+    cursor: not-allowed;
+    background: ${CypherTheme.disabled};
+    color: ${CypherTheme.white} !important;
+  }
+
+  p {
+    margin: 0;
+    font-family: "Atures";
+    font-size: 18px;
+
+    @media only screen and (max-width: 650px) {
+      font-size: 16px;
+    }
+  }
+`
 const ExternalCardButton = styled.a`
   height: 58px;
   width: 190px;

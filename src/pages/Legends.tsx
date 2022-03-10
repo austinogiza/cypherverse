@@ -59,7 +59,14 @@ const Legends: FC = () => {
               </RowText>
 
               <Buttons>
-                <DiscordButton onClick={openModal}>
+                {/* <DiscordButton onClick={openModal}>
+                  <p>READ BOOK FOR FREE</p>
+                </DiscordButton>{" "} */}
+                <DiscordButton
+                  href="https://legendsofcypherpdf.netlify.app/deploy/meru-36-web.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <p>READ BOOK FOR FREE</p>
                 </DiscordButton>{" "}
                 <TwitterButton to="/meru-36">
@@ -248,7 +255,7 @@ const Buttons = styled.div`
     align-items: center;
   }
 `
-const DiscordButton = styled.button`
+const DiscordButton = styled.a`
   height: 58px;
   width: 230px;
   background: ${CypherTheme.white};

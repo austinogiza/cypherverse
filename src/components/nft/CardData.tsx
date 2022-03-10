@@ -4,8 +4,8 @@ import nfts from "assets/images/merunew.png"
 export const nftCardData = [
   {
     image: lor,
-    slug: "",
-    external: false,
+    slug: "https://legendsofcypherpdf.netlify.app/deploy/meru-36-web.html",
+    external: true,
     page: "READ MERU-36",
   },
   {
