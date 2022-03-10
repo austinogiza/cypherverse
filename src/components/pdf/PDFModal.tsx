@@ -48,7 +48,7 @@ const Body = styled.div`
   position: relative !important;
   z-index: 43;
   height: 500px;
-  max-width: 800px;
+  max-width: 400px;
   margin: 0 auto;
   width: 100%;
   border-radius: 4px;
@@ -70,7 +70,7 @@ const CloseIcon = styled(GrClose)`
   cursor: pointer;
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 10px;
   path {
     color: ${CypherTheme.white};
     fill: ${CypherTheme.white};

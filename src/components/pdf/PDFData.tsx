@@ -1,10 +1,8 @@
 import cover from "assets/pdf/pages/cover.jpg"
 import page1 from "assets/pdf/pages/0001.jpg"
-import page2 from "assets/pdf/pages/0002.jpg"
 import page3 from "assets/pdf/pages/0003.jpg"
-import page4 from "assets/pdf/pages/0004.jpg"
 import page5 from "assets/pdf/pages/0005.jpg"
-import page6 from "assets/pdf/pages/0006.jpg"
+
 import page7 from "assets/pdf/pages/0007.jpg"
 import page8 from "assets/pdf/pages/0008.jpg"
 import page9 from "assets/pdf/pages/0009.jpg"
@@ -12,7 +10,6 @@ import page10 from "assets/pdf/pages/0010.jpg"
 import page11 from "assets/pdf/pages/0011.jpg"
 import page12 from "assets/pdf/pages/0012.jpg"
 import page13 from "assets/pdf/pages/0013.jpg"
-import page14 from "assets/pdf/pages/0014.jpg"
 import page15 from "assets/pdf/pages/0015.jpg"
 import page16 from "assets/pdf/pages/0016.jpg"
 import page17 from "assets/pdf/pages/0017.jpg"
@@ -28,9 +25,9 @@ import page26 from "assets/pdf/pages/0026.jpg"
 import page27 from "assets/pdf/pages/0027.jpg"
 import page28 from "assets/pdf/pages/0028.jpg"
 import page29 from "assets/pdf/pages/0029.jpg"
-import page30 from "assets/pdf/pages/0030.jpg"
+
 import page31 from "assets/pdf/pages/0031.jpg"
-import page32 from "assets/pdf/pages/0032.jpg"
+
 import page33 from "assets/pdf/pages/0033.jpg"
 import page34 from "assets/pdf/pages/0034.jpg"
 import page35 from "assets/pdf/pages/0035.jpg"
@@ -54,15 +51,15 @@ import page52 from "assets/pdf/pages/0052.jpg"
 import page53 from "assets/pdf/pages/0053.jpg"
 import page54 from "assets/pdf/pages/0054.jpg"
 import page55 from "assets/pdf/pages/0055.jpg"
-import page56 from "assets/pdf/pages/0056.jpg"
+
 export const pdfData = [
   { img: cover },
   { img: page1 },
-  { img: page2 },
+
   { img: page3 },
-  { img: page4 },
+
   { img: page5 },
-  { img: page6 },
+
   { img: page7 },
   { img: page8 },
   { img: page9 },
@@ -71,7 +68,7 @@ export const pdfData = [
 
   { img: page12 },
   { img: page13 },
-  { img: page14 },
+
   { img: page15 },
   { img: page16 },
   { img: page17 },
@@ -87,9 +84,9 @@ export const pdfData = [
   { img: page27 },
   { img: page28 },
   { img: page29 },
-  { img: page30 },
+
   { img: page31 },
-  { img: page32 },
+
   { img: page33 },
   { img: page34 },
   { img: page35 },
@@ -113,5 +110,4 @@ export const pdfData = [
   { img: page53 },
   { img: page54 },
   { img: page55 },
-  { img: page56 },
 ]
