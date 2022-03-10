@@ -135,7 +135,7 @@ const Buttons = styled.div`
 `
 const DiscordButton = styled.button`
   height: 58px;
-  width: 190px;
+  width: 250px;
   background: ${CypherTheme.white};
   outline: none;
   transition: 0.4s cubic-bezier(0.12, 0.73, 0.92, 0.34);
