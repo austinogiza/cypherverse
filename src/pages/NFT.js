@@ -30,8 +30,7 @@ const NFT = () => {
           1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
         },
       })
-      connector.networkId = 1
-      connector.updateRpcUrl(1)
+
       const web3Provider = new providers.Web3Provider(connector)
       let provider = web3Provider
       return provider
@@ -49,8 +48,7 @@ const NFT = () => {
       1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
     },
   })
-  connector.networkId = 1
-  connector.updateRpcUrl(1)
+
   const connectMetaMask = async () => {
     const { ethereum } = window
     if (ethereum) {
@@ -106,18 +104,18 @@ const NFT = () => {
       localStorage.removeItem("walletconnect")
       setConnectedAccount(false)
     })
-    // connector.on("connect", (code, accounts) => {
-    //   // Get updated accounts and chainId
-    //   console.log(accounts)
-    //   console.log(connector)
-    //   const account = connector.accounts[0]
+    connector.on("connect", (accounts) => {
+      // Get updated accounts and chainId
+      console.log(accounts)
+      console.log(connector)
+      const account = accounts[0]
 
-    //   localStorage.setItem("userAddress", account)
-    //   setCurrentAccount(account)
-    //   setOpen(false)
-    //   setCurrentWallet("walletconnect")
-    //   localStorage.setItem("walletConnection", "walletconnect")
-    // })
+      localStorage.setItem("userAddress", account)
+      setCurrentAccount(account)
+      setOpen(false)
+      setCurrentWallet("walletconnect")
+      localStorage.setItem("walletConnection", "walletconnect")
+    })
   }
 
   const checkIfWalletIsConnected = async () => {
@@ -177,16 +175,17 @@ const NFT = () => {
     }
   }
 
-  // connector.on("connect", (code, accounts) => {
-  //   // Get updated accounts and chainId
-  //   const account = connector.accounts[0]
-
-  //   localStorage.setItem("userAddress", account)
-  //   setCurrentAccount(account)
-  //   setOpen(false)
-  //   setCurrentWallet("walletconnect")
-  //   localStorage.setItem("walletConnection", "walletconnect")
-  // })
+  connector.on("connect", (accounts) => {
+    // Get updated accounts and chainId
+    const account = accounts[0]
+    console.log(account)
+    console.log(accounts)
+    localStorage.setItem("userAddress", account)
+    setCurrentAccount(account)
+    setOpen(false)
+    setCurrentWallet("walletconnect")
+    localStorage.setItem("walletConnection", "walletconnect")
+  })
 
   connector.on("accountsChanged", (accounts) => {
     console.log(accounts)

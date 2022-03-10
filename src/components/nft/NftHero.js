@@ -4,7 +4,7 @@ import legend from "assets/videos/trailer.mp4"
 import { CypherTheme } from "styles/ColorStyles"
 import { Header3, Body3 } from "styles/TextStyles"
 import { BsPlayFill } from "react-icons/bs"
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 
 const NFTHero = () => {
   const [playing, setPlaying] = useState(false)
@@ -21,11 +21,21 @@ const NFTHero = () => {
       setPlaying(false)
     }
   }
+
+  useEffect(() => {
+    autoPlayVideo()
+  }, [])
   return (
     <>
       <Body>
         <Cover>
-          <video autoPlay={true}>
+          <video
+            autoPlay={true}
+            ref={videoRef}
+            controls={false}
+            volume={1}
+            muted={false}
+          >
             {!playing && (
               <PlayCover className="image_bg_gif">
                 <PlayButton onClick={() => videoHandler("play")} />
