@@ -3519,6 +3519,13 @@
   "resolved" "https://registry.npmjs.org/@web3-react/types/-/types-6.0.7.tgz"
   "version" "6.0.7"
 
+"@web3-react/types@^8.0.0-beta.0":
+  "integrity" "sha512-6yVwgf+zOt2/o6l0DeZXJcKV/85rcafS3MSLk8c2l98Jw8THc+ZyOeLWb0TUBzj7rc5v+PoKz4Fs2wsf8LOJew=="
+  "resolved" "https://registry.npmjs.org/@web3-react/types/-/types-8.0.0-beta.0.tgz"
+  "version" "8.0.0-beta.0"
+  dependencies:
+    "zustand" "^4.0.0-beta.0"
+
 "@web3-react/walletconnect-connector@^6.2.13":
   "integrity" "sha512-rTsYLv2UpQZ92Yv5kyIwzrG+2aQkzE8ki2ElotJ6GmSl3yF9WSaGNfKpE8XI5+aPvbAk4mMn8lIy+os3a9gJgw=="
   "resolved" "https://registry.npmjs.org/@web3-react/walletconnect-connector/-/walletconnect-connector-6.2.13.tgz"
@@ -3529,6 +3536,13 @@
     "@web3-react/abstract-connector" "^6.0.7"
     "@web3-react/types" "^6.0.7"
     "tiny-invariant" "^1.0.6"
+
+"@web3-react/walletconnect@^8.0.1-beta.0":
+  "integrity" "sha512-GZKtxXW6GRfSv68kmfTbZBDR/MPgSb4AOX7TVjxShX0UQB10BGmxjd/EK1BRucwijAIXo9ERDU0plbKjC1S8bA=="
+  "resolved" "https://registry.npmjs.org/@web3-react/walletconnect/-/walletconnect-8.0.1-beta.0.tgz"
+  "version" "8.0.1-beta.0"
+  dependencies:
+    "@web3-react/types" "^8.0.0-beta.0"
 
 "@web3-ui/components@^0.10.1":
   "integrity" "sha512-ySLdP+VEvH+g0Cp93jsv8Zfcx0jyKoJ4bnSqoEwwhr6lkiEBzMRzsRK3PqP3kn3hh6hDuWhosAItRR7Y77dKAQ=="
@@ -11005,6 +11019,11 @@
   "resolved" "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz"
   "version" "2.2.0"
 
+"page-flip@latest":
+  "integrity" "sha512-96lQFUUz7r/LZzEUZJ3yBIMEKU9+m8HMFDzTvTdD6P7Ag/wXINjp9n0W7b4wanwnDbQETo4uNUoL3zMqpFxwGA=="
+  "resolved" "https://registry.npmjs.org/page-flip/-/page-flip-2.0.7.tgz"
+  "version" "2.0.7"
+
 "pako@~1.0.5":
   "integrity" "sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw=="
   "resolved" "https://registry.npmjs.org/pako/-/pako-1.0.11.tgz"
@@ -12425,6 +12444,13 @@
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-17.0.1.tgz"
   "version" "17.0.1"
 
+"react-pageflip@^2.0.3":
+  "integrity" "sha512-k81mHhRvUM52y8jyzTCh5t4O0lepkLhp+XGSUzq2C3uD+iW99Cv0jfRlqFCjZbD5N3jKkIFr7/3giucoXKDP3Q=="
+  "resolved" "https://registry.npmjs.org/react-pageflip/-/react-pageflip-2.0.3.tgz"
+  "version" "2.0.3"
+  dependencies:
+    "page-flip" "latest"
+
 "react-player@^2.9.0":
   "integrity" "sha512-jNUkTfMmUhwPPAktAdIqiBcVUKsFKrVGH6Ocutj6535CNfM91yrvWxHg6fvIX8Y/fjYUPoejddwh7qboNV9vGA=="
   "resolved" "https://registry.npmjs.org/react-player/-/react-player-2.9.0.tgz"
@@ -12562,7 +12588,7 @@
   dependencies:
     "clsx" "^1.1.1"
 
-"react@*", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^17.0.2", "react@>= 0.14.0 < 18.0.0", "react@>= 16", "react@>= 16.8.0", "react@>= 16.8.0 | >= 17.0.0", "react@>=16", "react@>=16.6.0", "react@>=16.8", "react@>=16.8 || ^17.0.0", "react@>=16.8.0", "react@>=16.8.6", "react@17.0.2":
+"react@*", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^17.0.2", "react@>= 0.14.0 < 18.0.0", "react@>= 16", "react@>= 16.8.0", "react@>= 16.8.0 | >= 17.0.0", "react@>=16", "react@>=16.6.0", "react@>=16.8", "react@>=16.8 || ^17.0.0", "react@>=16.8.0", "react@>=16.8.6", "react@17.0.2", "react@18.0.0-rc.1-next-629036a9c-20220224":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -14725,6 +14751,11 @@
     "detect-node-es" "^1.1.0"
     "tslib" "^1.9.3"
 
+"use-sync-external-store@1.0.0-rc.1-next-629036a9c-20220224":
+  "integrity" "sha512-IhuMl0apVVYsT3XPfV+0nuwf0T6+3d4YxQXV4tDRsGpSQcYVG4zoWwfX4zdtouUfuelYg4t2SEmFifIMrxPfIw=="
+  "resolved" "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.0.0-rc.1-next-629036a9c-20220224.tgz"
+  "version" "1.0.0-rc.1-next-629036a9c-20220224"
+
 "use@^3.1.0":
   "integrity" "sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ=="
   "resolved" "https://registry.npmjs.org/use/-/use-3.1.1.tgz"
@@ -15846,3 +15877,10 @@
     "nanoclone" "^0.2.1"
     "property-expr" "^2.0.4"
     "toposort" "^2.0.2"
+
+"zustand@^4.0.0-beta.0":
+  "integrity" "sha512-aJ5ypnOwPIa/uSjdZv/oHChTWPplpFOG/hvWwzkR5ahFiPI5R6ifyObf8Fz1Vi6Obz2wY1N32fT2pNrpT2hzPw=="
+  "resolved" "https://registry.npmjs.org/zustand/-/zustand-4.0.0-beta.2.tgz"
+  "version" "4.0.0-beta.2"
+  dependencies:
+    "use-sync-external-store" "1.0.0-rc.1-next-629036a9c-20220224"

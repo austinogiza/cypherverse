@@ -45,7 +45,7 @@ const Modal = styled.div`
   padding: 16px;
 `
 const Body = styled.div`
-  position: relative;
+  position: relative !important;
   z-index: 43;
   height: 500px;
   max-width: 800px;
@@ -66,7 +66,7 @@ const Cover = styled.div`
 const CloseIcon = styled(GrClose)`
   width: 24px;
   height: 24px;
-
+  z-index: 99 !important;
   cursor: pointer;
   position: absolute;
   top: 20px;

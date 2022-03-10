@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react"
 import WalletModal from "components/model/WalletModal"
 import Navbar from "components/Navbar"
 import { isMobile } from "react-device-detect"
-import { ethers } from "ethers"
+import { providers } from "ethers"
 import { contractABI, contractAddress } from "contract/contract"
-import WalletConnect from "@walletconnect/client"
-import QRCodeModal from "@walletconnect/qrcode-modal"
+
 import NFTHero from "components/nft/NftHero"
 import NFTBody from "components/nft/NFtBody"
 import NFTBottom from "components/nft/NFTBottom"
-
+import WalletConnectProvider from "@walletconnect/web3-provider"
 const NFT = () => {
   const [currentAccount, setCurrentAccount] = useState(
     localStorage.getItem("userAddress") || ""
@@ -21,10 +20,34 @@ const NFT = () => {
     localStorage.getItem("userWallet") || ""
   )
 
+  const detectProvider = () => {
+    let provider
+    const walletName = localStorage.getItem("walletConnection")
+
+    if (walletName === "walletconnect") {
+      const connector = new WalletConnectProvider({
+        rpc: {
+          1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
+        },
+        bridge: "https://bridge.walletconnect.org",
+      })
+      const web3Provider = new providers.Web3Provider(connector)
+      let provider = web3Provider
+      return provider
+    } else if (walletName === "metamask") {
+      const { ethereum } = window
+      let provider = ethereum
+      return provider
+    }
+    return provider
+  }
+
   //create wallet connect modal
-  const connector = new WalletConnect({
-    bridge: "https://bridge.walletconnect.org", // Required
-    qrcodeModal: QRCodeModal,
+  const connector = new WalletConnectProvider({
+    rpc: {
+      1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
+    },
+    bridge: "https://bridge.walletconnect.org",
   })
   connector.on("session_update", (error, payload) => {
     if (error) {
@@ -53,29 +76,25 @@ const NFT = () => {
     }
   }
 
-  const connectWalletConnect = () => {
+  const connectWalletConnect = async () => {
     // Check if connection is already established
-    if (!connector.connected) {
-      // create new session
-      connector.createSession()
-    } else {
-      if (QRCodeModal.close()) {
-      }
-      const account = connector.accounts[0]
 
-      localStorage.setItem("userAddress", account)
-      setCurrentAccount(account)
-      setOpen(false)
-      setCurrentWallet("walletconnect")
-      localStorage.setItem("walletConnection", "walletconnect")
-    }
+    const connector = new WalletConnectProvider({
+      rpc: {
+        1: "https://eth-mainnet.gateway.pokt.network/v1/lb/6229385aabc11f0039cad425",
+      },
+      bridge: "https://bridge.walletconnect.org",
+    })
 
-    connector.on("connect", (error, payload) => {
-      if (error) {
-        throw error
-      }
+    //  Enable session (triggers QR Code modal)
+    console.log(connector.qrcodeModal)
+    await connector.enable()
 
-      // Get updated accounts and chainId
+    connector.on("accountsChanged", (accounts) => {
+      console.log(accounts)
+
+      //   // Get updated accounts and chainId
+
       const account = connector.accounts[0]
 
       localStorage.setItem("userAddress", account)
@@ -84,13 +103,9 @@ const NFT = () => {
       setCurrentWallet("walletconnect")
       localStorage.setItem("walletConnection", "walletconnect")
     })
-    connector.on("session_update", (error, payload) => {
-      if (error) {
-        throw error
-      }
 
+    connector.on("connect", (code, reason) => {
       // Get updated accounts and chainId
-
       const account = connector.accounts[0]
 
       localStorage.setItem("userAddress", account)
@@ -173,11 +188,8 @@ const NFT = () => {
     localStorage.setItem("walletConnection", "walletconnect")
   })
 
-  connector.on("disconnect", (error, payload) => {
-    if (error) {
-      throw error
-    }
-
+  connector.on("disconnect", (code, reason) => {
+    console.log(code, reason)
     // Delete connector
     localStorage.removeItem("userAddress")
     localStorage.removeItem("walletConnection")
