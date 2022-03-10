@@ -31,20 +31,22 @@ const Legends: FC = () => {
       <Body>
         <Cover>
           <img src={legend} alt="legend" />
-          <Title>Legends of Cypher Lore</Title>
-          <MiddleText>
-            Legends of Cypher is a multimedia project that tells the story of a
-            future human civilization fighting for individual freedom. On one
-            side is Hash and his “gift”, a technology that can free humanity
-            from bondage. Malarian, a high-ranking agent of the inter-planetary
-            Centopoly empire, will stop at nothing to prevent Hash and his
-            allies from giving humanity its freedom. Our story will be presented
-            in a series of comics that will be released across multiple
-            “seasons.” Below you'll find currently released lore from the
-            Legends of Cypher universe. In the future we will release the
-            Legends of Cypher Wiki, which will feature additional lore developed
-            by the Origin Group and the community.
-          </MiddleText>
+          <TopCover>
+            <Title>Legends of Cypher Lore</Title>
+            <MiddleText>
+              Legends of Cypher is a multimedia project that tells the story of
+              a future human civilization fighting for individual freedom. On
+              one side is Hash and his “gift”, a technology that can free
+              humanity from bondage. Malarian, a high-ranking agent of the
+              inter-planetary Centopoly empire, will stop at nothing to prevent
+              Hash and his allies from giving humanity its freedom. Our story
+              will be presented in a series of comics that will be released
+              across multiple “seasons.” Below you'll find currently released
+              lore from the Legends of Cypher universe. In the future we will
+              release the Legends of Cypher Wiki, which will feature additional
+              lore developed by the Origin Group and the community.
+            </MiddleText>
+          </TopCover>
           <SecondRow>
             <SecondRowLeft>
               <GridTitle>Meru-36: Destiny’s Fall (Feb. 2022)</GridTitle>
@@ -142,6 +144,19 @@ const Cover = styled.div`
     object-fit: contain;
   }
 `
+
+const TopCover = styled.div`
+  max-width: 1312px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media only screen and (max-width: 650px) {
+    align-items: flex-start;
+  }
+`
 const GridImage = styled.img`
   min-height: 250px;
   max-height: 744px;
@@ -218,6 +233,7 @@ const Title = styled(Header3)`
   text-align: center;
   @media only screen and (max-width: 700px) {
     text-align: left;
+    margin: 32px 0 8px 0;
   }
 `
 
@@ -279,6 +295,9 @@ const MiddleText = styled(Body1)`
   color: ${CypherTheme.white};
   text-align: center;
   margin: 8px 0 32px 0;
+  @media only screen and (max-width: 650px) {
+    text-align: left;
+  }
 `
 const MiddleHeader = styled(Header7)`
   color: ${CypherTheme.white};
