@@ -5,10 +5,11 @@ import { Body3, Header2 } from "styles/TextStyles"
 import meru from "assets/images/merunew.png"
 import pdf from "assets/pdf/meru-36.pdf"
 interface NFtprops {
-  activeAccount?: boolean
+  activeAccount?: boolean,
+  btnState?: boolean
 }
 const NFTBottom: FC<NFtprops> = (props) => {
-  const { activeAccount } = props
+  const { activeAccount , btnState } = props
   return (
     <Body>
       <Cover>
@@ -24,11 +25,24 @@ const NFTBottom: FC<NFtprops> = (props) => {
               <DiscordButton disabled>
                 <p>Order Book: Coming Soon</p>
               </DiscordButton>{" "}
-              {activeAccount && (
+              {
+                btnState === true ? 
+                
+                activeAccount && (
                 <TwitterButton href={pdf} rel="noopener noreferrer" download>
                   <p>DOWNLOAD PDF </p>
                 </TwitterButton>
-              )}{" "}
+                )
+               
+                :
+                <>
+                </>
+              }
+              {/* {activeAccount && (
+                <TwitterButton href={pdf} rel="noopener noreferrer" download>
+                  <p>DOWNLOAD PDF </p>
+                </TwitterButton>
+              )}{" "} */}
             </Buttons>{" "}
           </SecondRowLeft>
           <SecondRowRight>

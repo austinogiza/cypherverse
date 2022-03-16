@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useMemo } from "react"
 import WalletModal from "components/model/WalletModal"
 import Navbar from "components/Navbar"
 import { isMobile } from "react-device-detect"
-import { providers } from "ethers"
-import { contractABI, contractAddress } from "contract/contract"
+import { Contract, providers, getDefaultProvider } from "ethers"
+import { contractABI } from "contract/contract"
+// import  { ethers } from "ethers";
 
 import NFTHero from "components/nft/NftHero"
 import NFTBody from "components/nft/NFtBody"
 import NFTBottom from "components/nft/NFTBottom"
 import WalletConnectProvider from "@walletconnect/web3-provider"
 const NFT = () => {
+  const [btnDownload, setBtndownload] = useState(false);
   const [currentAccount, setCurrentAccount] = useState(
     localStorage.getItem("userAddress") || ""
   )
@@ -136,25 +138,27 @@ const NFT = () => {
     setOpen(false)
   }
 
-  // const checkNFTs = async () => {
-  //   const provider = new ethers.providers.Web3Provider(ethereum)
+  useMemo(async () => {
+    if (connectedAccount) {
+      const contract = new Contract(
+        "0x142fd5b9d67721efda3a5e2e9be47a96c9b724a4",
+        // "0x47c5b8fac7D795F299298075dB6D574EAc479ac1",
+        contractABI,
+        getDefaultProvider()
+      )
 
-  //   // const provider = new ethers.providers.Web3Provider(ethereum)
-
-  //   // const contract = new ethers.Contract(contractAddress, contractABI, provider) // create instance
-
-  //   // const balance = await contract.balanceOf(JSON.stringify(currentAccount), 1) // read from the contract
-  //   // console.log("balance", balance.toNumber())
-
-  //   const contract = new ethers.Contract(
-  //     "0x47c5b8fac7D795F299298075dB6D574EAc479ac1",
-  //     contractABI,
-  //     provider
-  //   ) // create instance
-  //   const usrAddress = "0x6E0d1Ba68e0DF6D4C11f46a4C8c7E55C9149164d"
-  //   const balance = await contract.balanceOf(usrAddress) // read from the contract
-  //   console.log("balance", balance.toNumber())
-  // }
+      // create instance
+      // const usrAddress = "0x6E0d1Ba68e0DF6D4C11f46a4C8c7E55C9149164d"
+      // const usrAddress = "0x7c0e3b144153Bbe77CD73F0C617A4Aa15fa75125"
+      const usrAddress = localStorage.getItem("userAddress")
+      const balance = await contract.balanceOf(usrAddress, 1)
+      console.log('balance = ', balance.toNumber())
+      if(balance.toNumber()===0)
+        setBtndownload(false);
+      else
+        setBtndownload(true);
+    }
+  }, [connectedAccount])
 
   const disconnectAccount = async () => {
     const walletName = localStorage.getItem("walletConnection")
@@ -221,6 +225,7 @@ const NFT = () => {
 
   return (
     <>
+
       <Navbar
         activeAccount={connectedAccount}
         currentAccount={currentAccount}
@@ -234,8 +239,9 @@ const NFT = () => {
         connectWalletConnect={connectWalletConnect}
       />
       <NFTHero />
+      {/* {checkNFTs()} */}
       <NFTBody />
-      <NFTBottom activeAccount={connectedAccount} />
+      <NFTBottom activeAccount={connectedAccount} btnState={btnDownload}/>
     </>
   )
 }
