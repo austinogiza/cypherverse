@@ -1,15 +1,33 @@
-import React, { FC } from "react"
-import styled from "styled-components"
-import { CypherTheme } from "styles/ColorStyles"
-import { Body3, Header2 } from "styles/TextStyles"
-import meru from "assets/images/merunew.png"
-import pdf from "assets/pdf/meru-36.pdf"
+import React, { FC, useEffect, useState } from "react";
+import Web3 from "web3";
+import styled from "styled-components";
+import { CypherTheme } from "styles/ColorStyles";
+import { Body3, Header2 } from "styles/TextStyles";
+import meru from "assets/images/merunew.png";
+import pdf from "assets/pdf/meru-36.pdf";
+import ERC1155abi from "abis/ERC1155.json";
+import { BigNumber } from "ethers";
+
+declare let window: any;
+
 interface NFtprops {
-  activeAccount?: boolean,
-  btnState?: boolean
+  activeAccount?: boolean;
+  currentAccount?: any;
 }
 const NFTBottom: FC<NFtprops> = (props) => {
-  const { activeAccount , btnState } = props
+  const [balance, setBalance] = useState<any>(null);
+  const { activeAccount, currentAccount } = props;
+  useEffect(() => {
+    fetchBalance();
+  }, [activeAccount]);
+  const fetchBalance = async () => {
+    if (!activeAccount || !currentAccount) return 0;
+    let value;
+    window.web3 = new Web3(window.ethereum);
+    const tokenERC1155Instance = await new window.web3.eth.Contract(ERC1155abi, "0x58e4e5c0d245cda9d984c76d71ae23e030c7b5cf");
+    value = await tokenERC1155Instance.methods.balanceOf(currentAccount, 1).call();
+    setBalance(value);
+  };
   return (
     <Body>
       <Cover>
@@ -17,32 +35,16 @@ const NFTBottom: FC<NFtprops> = (props) => {
         <SecondRow>
           <SecondRowLeft>
             <GridTitle>Own the NFT?</GridTitle>
-            <RowText>
-              Connect your wallet to download your PDF copy of the book. Use the
-              NFT to order a copy of the Meru-36 limited edition paperback
-            </RowText>
+            <RowText>Connect your wallet to download your PDF copy of the book. Use the NFT to order a copy of the Meru-36 limited edition paperback</RowText>
             <Buttons>
               <DiscordButton disabled>
                 <p>Order Book: Coming Soon</p>
               </DiscordButton>{" "}
-              {
-                btnState === true ? 
-                
-                activeAccount && (
+              {activeAccount && balance > 0 && (
                 <TwitterButton href={pdf} rel="noopener noreferrer" download>
                   <p>DOWNLOAD PDF </p>
                 </TwitterButton>
-                )
-               
-                :
-                <>
-                </>
-              }
-              {/* {activeAccount && (
-                <TwitterButton href={pdf} rel="noopener noreferrer" download>
-                  <p>DOWNLOAD PDF </p>
-                </TwitterButton>
-              )}{" "} */}
+              )}{" "}
             </Buttons>{" "}
           </SecondRowLeft>
           <SecondRowRight>
@@ -51,8 +53,8 @@ const NFTBottom: FC<NFtprops> = (props) => {
         </SecondRow>
       </Cover>
     </Body>
-  )
-}
+  );
+};
 const Body = styled.div`
   margin: 40px 0;
   display: flex;
@@ -62,7 +64,7 @@ const Body = styled.div`
   background: ${CypherTheme.primary};
   height: 100%;
   padding: 16px;
-`
+`;
 
 const Cover = styled.div`
   max-width: 1312px;
@@ -80,7 +82,7 @@ const Cover = styled.div`
     max-width: 1312px;
     object-fit: contain;
   }
-`
+`;
 const GridImage = styled.img`
   min-height: 250px;
   max-height: 744px;
@@ -88,13 +90,13 @@ const GridImage = styled.img`
   max-width: 520px;
   width: 100%;
   /* object-fit: cover; */
-`
+`;
 
 const GridTitle = styled(Header2)`
   color: ${CypherTheme.white};
   margin: 8px 0;
   text-align: left;
-`
+`;
 
 const RowText = styled(Body3)`
   margin: 16px 0;
@@ -109,7 +111,7 @@ const RowText = styled(Body3)`
       margin: 2px 0;
     }
   }
-`
+`;
 const SecondRow = styled.div`
   display: grid;
   max-width: 1300px;
@@ -128,13 +130,13 @@ const SecondRow = styled.div`
       "SecondLeft";
     margin: 16px auto;
   }
-`
+`;
 const SecondRowLeft = styled.div`
   grid-area: SecondLeft;
-`
+`;
 const SecondRowRight = styled.div`
   grid-area: SecondRight;
-`
+`;
 
 const Buttons = styled.div`
   display: flex;
@@ -146,7 +148,7 @@ const Buttons = styled.div`
     justify-content: center;
     align-items: center;
   }
-`
+`;
 const DiscordButton = styled.button`
   height: 58px;
   width: 250px;
@@ -180,7 +182,7 @@ const DiscordButton = styled.button`
       font-size: 16px;
     }
   }
-`
+`;
 const TwitterButton = styled.a`
   height: 58px;
   width: 190px;
@@ -215,5 +217,5 @@ const TwitterButton = styled.a`
   @media only screen and (max-width: 650px) {
     margin: 16px 0;
   }
-`
-export default NFTBottom
+`;
+export default NFTBottom;
