@@ -40,7 +40,7 @@ const App = () => {
               <Route path="/meru-36" element={<NFT />} />
               <Route path="/nft-gallery" element={<Claim />} />
               <Route path="/translator" element={<Translator />} />
-              <Route path="/prisma" element={<Prisma />} />
+              <Route path="/lunastus-ripae" element={<Prisma />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </Suspense>

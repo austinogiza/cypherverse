@@ -29,7 +29,7 @@ const PrismaCard: FC<CardProps> = (props) => {
             <ExternalCardButton
               target="_blank"
               rel="noopener noreferrer"
-              href={`http://${slug}`}
+              href={`${slug}`}
             >
               <p>{page}</p>
             </ExternalCardButton>

@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { CypherTheme } from "styles/ColorStyles"
 import { Body1, Body4 } from "styles/TextStyles"
@@ -11,7 +10,12 @@ const Banner = () => {
         <Text>
           Legends of Cypher is now a StoryPrima DAO-incubated project.
         </Text>
-        <BannerButton to="/prisma">
+
+        <BannerButton
+          href="https://storyprima.io/legends-of-cypher-the-first-storyprima-dao-incubated-project/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <ButtonText>Info: DAO & Airdrop</ButtonText>
         </BannerButton>
       </Cover>
@@ -41,7 +45,7 @@ const Cover = styled.div`
 const Text = styled(Body1)`
   text-align: center;
 `
-const BannerButton = styled(Link)`
+const BannerButton = styled.a`
   height: 40px;
   width: 230px;
   background: ${CypherTheme.white};
