@@ -17,9 +17,6 @@ const Community: FC = () => {
         <CommunityHero />
 
         <CommunityWaiting />
-        {/* <CommunityPhase />
-
-        <CommunityStory /> */}
       </Body>
     </>
   )
