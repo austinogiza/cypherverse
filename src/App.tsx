@@ -19,6 +19,7 @@ const NFT = lazy(() => import(/* webpackPrefetch:true */ "pages/NFT"))
 const Legends = lazy(() => import(/* webpackPrefetch:true */ "pages/Legends"))
 const Claim = lazy(() => import(/* webpackPrefetch:true */ "pages/NFTGallery"))
 const ErrorPage = lazy(() => import(/* webpackPrefetch:true */ "pages/404"))
+const Prisma = lazy(() => import(/* webpackPrefetch:true */ "pages/Prisma"))
 const App = () => {
   useEffect(() => {
     gsap.to("body", 0, { css: { visibility: "visible" } })
@@ -39,7 +40,7 @@ const App = () => {
               <Route path="/meru-36" element={<NFT />} />
               <Route path="/nft-gallery" element={<Claim />} />
               <Route path="/translator" element={<Translator />} />
-
+              <Route path="/prisma" element={<Prisma />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </Suspense>

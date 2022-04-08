@@ -1,3 +1,4 @@
+import Banner from "components/Banner"
 import Footer from "components/Footer"
 import Navbar from "components/Navbar"
 import React from "react"
@@ -10,7 +11,6 @@ const Layout = ({ children }) => {
   return (
     <React.Fragment>
       {router.pathname === "/meru-36" ? null : <Navbar />}
-
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -22,6 +22,7 @@ const Layout = ({ children }) => {
         draggable
         pauseOnHover
       />
+      <Banner />
       {children}
       <Footer />
     </React.Fragment>

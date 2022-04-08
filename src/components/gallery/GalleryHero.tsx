@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { MainButton } from "styles/ButtonStyles"
 import { CypherTheme } from "styles/ColorStyles"
 import { Body3, Header2, Header6Regular } from "styles/TextStyles"
 
@@ -19,6 +20,14 @@ const GalleryHero = () => {
               to the story and lore of the universe. These artifacts may contain
               Easter Eggs, deliver special perks and much more.
             </RowText>
+            <RowText>
+              Holders of NFTs from the Origin Collection will receive PRIMA{" "}
+              <br />
+              tokens during the upcoming StoryPrima DAO airdrop.
+            </RowText>
+            <PrismaButton to="/prisma">
+              <p>Info: PRIMA Airdrop</p>
+            </PrismaButton>
           </SecondRowLeft>
         </SecondRow>
       </Cover>
@@ -43,6 +52,7 @@ const Cover = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 `
 
@@ -80,6 +90,14 @@ const SecondRow = styled.div`
   justify-content: center;
   margin: 40px auto;
 `
-const SecondRowLeft = styled.div``
+const SecondRowLeft = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+const PrismaButton = styled(MainButton)``
 
 export default GalleryHero
