@@ -1,15 +1,19 @@
 import React from "react"
 import styled from "styled-components"
-import { MainButton } from "styles/ButtonStyles"
+import { MainLinkButton } from "styles/ButtonStyles"
 import { CypherTheme } from "styles/ColorStyles"
 import { Body3, Header2, Header6Regular } from "styles/TextStyles"
-
+import meru from "assets/images/meru.jpg"
 const GalleryHero = () => {
   return (
     <Body>
       <Cover>
         {" "}
         <SecondRow>
+          {" "}
+          <SecondRowRight>
+            <GridImage src={meru} alt="about cypherverse" />
+          </SecondRowRight>
           <SecondRowLeft>
             <GridTitle>Legends of Cypher Collectibles</GridTitle>
             <GridTitleSmall>
@@ -25,7 +29,12 @@ const GalleryHero = () => {
               <br />
               tokens during the upcoming StoryPrima DAO airdrop.
             </RowText>
-            <PrismaButton to="/prisma">
+
+            <PrismaButton
+              href="https://storyprima.io/docs/prima-token-initial-airdrop/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p>Info: PRIMA Airdrop</p>
             </PrismaButton>
           </SecondRowLeft>
@@ -60,6 +69,13 @@ const GridTitle = styled(Header2)`
   color: ${CypherTheme.white};
   margin: 8px 0;
   text-align: center;
+`
+const SecondRowRight = styled.div``
+const GridImage = styled.img`
+  min-height: 250px;
+  max-width: 620px;
+  width: 100%;
+  margin: 0 auto;
 `
 
 const GridTitleSmall = styled(Header6Regular)`
@@ -98,6 +114,6 @@ const SecondRowLeft = styled.div`
   justify-content: center;
 `
 
-const PrismaButton = styled(MainButton)``
+const PrismaButton = styled(MainLinkButton)``
 
 export default GalleryHero

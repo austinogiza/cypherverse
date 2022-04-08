@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { MainLargeLinkButton } from "styles/ButtonStyles"
 import { CypherTheme } from "styles/ColorStyles"
 
 import { nftCardData } from "./CardData"
@@ -21,6 +22,13 @@ const NFTBody = () => {
             />
           ))}
         </CardsRow>
+        <NFTButton
+          href="https://storyprima.io/docs/prima-token-initial-airdrop/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <p> PRIMA Airdrop Eligible</p>
+        </NFTButton>
       </Cover>
     </Body>
   )
@@ -35,7 +43,9 @@ const Body = styled.div`
   height: 100%;
   padding: 16px;
 `
-
+const NFTButton = styled(MainLargeLinkButton)`
+  margin: 24px 0;
+`
 const Cover = styled.div`
   max-width: 1312px;
   margin: 0 auto;
