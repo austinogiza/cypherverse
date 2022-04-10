@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
         draggable
         pauseOnHover
       />
-      {/* <Banner /> */}
+      <Banner />
       {children}
       <Footer />
     </React.Fragment>

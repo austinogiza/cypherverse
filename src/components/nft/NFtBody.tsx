@@ -22,13 +22,13 @@ const NFTBody = () => {
             />
           ))}
         </CardsRow>
-        {/* <NFTButton
+        <NFTButton
           href="https://storyprima.io/docs/prima-token-initial-airdrop/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <p> PRIMA Airdrop Eligible</p>
-        </NFTButton> */}
+        </NFTButton>
       </Cover>
     </Body>
   )
