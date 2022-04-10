@@ -30,13 +30,13 @@ const GalleryHero = () => {
               tokens during the upcoming StoryPrima DAO airdrop.
             </RowText>
 
-            <PrismaButton
+            {/* <PrismaButton
               href="https://storyprima.io/docs/prima-token-initial-airdrop/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <p>Info: PRIMA Airdrop</p>
-            </PrismaButton>
+            </PrismaButton> */}
           </SecondRowLeft>
         </SecondRow>
       </Cover>
