@@ -4,7 +4,7 @@ import React, { useEffect } from "react"
 
 const Prisma = () => {
   useEffect(() => {
-    document.title = "Prisma Airdrop - Cypherverse"
+    document.title = "Lunastus and Sine Ripae - Cypherverse"
   }, [])
 
   return (
