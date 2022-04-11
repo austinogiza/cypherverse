@@ -5,7 +5,7 @@ export const cardData = [
     slug: "https://storyprima.io/docs/prima-token-initial-airdrop/",
     hashtag: "",
     external: true,
-    text: "Buy The NFT",
+    text: "Coming Soon",
     link: "nft-gallery",
     page: "PRIMA Airdrop Eligible",
   },

@@ -20,10 +20,10 @@ const PrismaCard: FC<CardProps> = (props) => {
       <Cover>
         <CardImage src={image} alt={text} />
         <CardText>{tag}</CardText>
-        <CardButton to={`/${link}`}>
+        <DisabledCardButton className="disabled">
           {" "}
           <CardText>{text}</CardText>
-        </CardButton>
+        </DisabledCardButton>
         {external ? (
           <>
             <ExternalCardButton
@@ -61,6 +61,11 @@ const Cover = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  .disabled {
+    cursor: not-allowed;
+    background: ${CypherTheme.disabled} !important;
+    color: ${CypherTheme.white} !important;
+  }
 `
 const CardImage = styled.img`
   height: 360px;
@@ -71,7 +76,7 @@ const CardImage = styled.img`
 `
 const CardText = styled(Body2)`
   text-align: center;
-  color: ${CypherTheme.black};
+  color: ${CypherTheme.white};
 `
 const CardButton = styled(Link)`
   height: 58px;
@@ -105,7 +110,38 @@ const CardButton = styled(Link)`
     }
   }
 `
+const DisabledCardButton = styled.a`
+  height: 58px;
+  max-width: 340px;
+  width: 100%;
+  margin: 24px 0 0 0;
+  background: ${CypherTheme.white};
+  outline: none;
+  transition: 0.4s cubic-bezier(0.12, 0.73, 0.92, 0.34);
+  border-radius: 0px;
+  color: ${CypherTheme.white};
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
+  line-height: 1.2;
+  :hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+
+  p {
+    margin: 0;
+    font-family: "Atures";
+    font-size: 18px;
+
+    @media only screen and (max-width: 650px) {
+      font-size: 16px;
+    }
+  }
+`
 const ExternalCardButton = styled.a`
   height: 58px;
   max-width: 340px;
