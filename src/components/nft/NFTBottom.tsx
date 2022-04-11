@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { CypherTheme } from "styles/ColorStyles"
 import { Body3, Header2 } from "styles/TextStyles"
 import meru from "assets/images/merunew.png"
-import pdf from "assets/pdf/meru-36.pdf"
+import pdf from "assets/pdf/Meru-36-download-version.pdf"
 import ERC1155abi from "abis/ERC1155.json"
 
 declare let window: any
