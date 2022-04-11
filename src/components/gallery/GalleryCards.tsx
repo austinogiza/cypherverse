@@ -11,7 +11,7 @@ interface CardProps {
   page: string
   slug: string
   text: string
-  tag: string
+  tag?: any
   external: boolean
   disabled: boolean
 }
@@ -73,11 +73,11 @@ const CardImage = styled.img`
   min-height: 258px;
   max-height: 400px !important;
   height: 100%;
-
-  max-width: 400px;
   width: 100%;
+  max-width: 450px !important;
   border-radius: 0px;
   margin: 0 0 16px 0;
+  object-fit: cover;
 `
 const CardText = styled(Body2)`
   text-align: center;

@@ -11,9 +11,6 @@ const GalleryHero = () => {
         {" "}
         <SecondRow>
           {" "}
-          <SecondRowRight>
-            <GridImage src={meru} alt="about cypherverse" />
-          </SecondRowRight>
           <SecondRowLeft>
             <GridTitle>Legends of Cypher Collectibles</GridTitle>
             <GridTitleSmall>

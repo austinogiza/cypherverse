@@ -25,9 +25,9 @@ const Season = () => {
             Key Season One Lore Drops
             <ul>
               <li>
-                Short Film: Prelude to the Quest for the Bridge Tech: Short 
-                animated film featuring a clash between Hash and Malarian 
-                and the introduction of Legends of Cypher factions. 
+                Short Film: Prelude to the Quest for the Bridge Tech: Short
+                animated film featuring a clash between Hash and Malarian and
+                the introduction of Legends of Cypher factions.
               </li>
               <li>
                 Legends of Cypher Season One Comics: A series of comics telling
@@ -52,11 +52,6 @@ const Season = () => {
           <RowContent>
             Key Season One NFT Drops
             <ul>
-              <li>
-                Cypherian’s Badge: The Cypherian’s Badge will provide holders
-                with exclusive access to the Legends of Cypher universe,
-                including special NFT drops and more.
-              </li>
               <li>
                 Faction Badges Fans will be able to collect free Faction Badges,
                 which will help immerse them in the Legends of Cypher story.

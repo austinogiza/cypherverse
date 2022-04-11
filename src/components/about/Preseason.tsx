@@ -66,7 +66,12 @@ const Preseason = () => {
                 Meru-36 book.
               </li>
               <li>
-                LoC Collectables We will also release a series of NFT
+                Cypherian’s Badge: The Cypherian’s Badge will provide holders
+                with exclusive access to the Legends of Cypher universe,
+                including special NFT drops and more.
+              </li>
+              <li>
+                LoC Collectibles We will also release a series of NFT
                 collectibles, including ships and art connected to the larger
                 Legends of Cypher universe.
               </li>

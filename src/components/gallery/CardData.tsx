@@ -1,6 +1,8 @@
 import cent from "assets/images/cento.png"
 import nfts from "assets/images/merunew.png"
 import access from "assets/images/access.png"
+import nft_placeholder from "assets/nft_placeholder.jpeg"
+
 import conclave from "assets/images/conclave.png"
 export const nftCardData = [
   {
@@ -13,6 +15,15 @@ export const nftCardData = [
     text: "Set: Origin Collection",
   },
   {
+    image: nft_placeholder,
+    slug: "",
+    external: false,
+    page: "COMING SOON",
+    coming: true,
+    hashtag: "",
+    text: "Starship and Scoutship: Lunastus and Sine Ripae",
+  },
+  {
     image: cent,
     slug: "",
     external: false,
@@ -21,6 +32,7 @@ export const nftCardData = [
     hashtag: "Centopoly Badge: Animated Artifact",
     text: "Set: Origin Collection",
   },
+
   {
     image: conclave,
     slug: "",
