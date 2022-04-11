@@ -2,15 +2,14 @@ import React from "react"
 import styled from "styled-components"
 import { CypherTheme } from "styles/ColorStyles"
 import { Body1, Header6 } from "styles/TextStyles"
-import meru from "assets/images/meru.jpg"
-
+import nft_placeholder from "assets/nft_placeholder.jpeg"
 const PrismaHero = () => {
   return (
     <Body>
       <Cover>
         <SecondRow>
           <SecondRowRight>
-            <GridImage src={meru} alt="about cypherverse" />
+            <GridImage src={nft_placeholder} alt="about cypherverse" />
           </SecondRowRight>
           <SecondRowLeft>
             <GridTitleSecond>About the Lunastus and Sine Ripae</GridTitleSecond>{" "}
