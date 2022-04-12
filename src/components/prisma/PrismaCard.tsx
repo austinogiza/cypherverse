@@ -14,7 +14,7 @@ interface CardProps {
   link: string
 }
 const PrismaCard: FC<CardProps> = (props) => {
-  const { image, slug, page, text, tag, external, link } = props
+  const { image, slug, page, text, tag, external } = props
   return (
     <Body>
       <Cover>

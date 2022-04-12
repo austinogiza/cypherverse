@@ -14,7 +14,7 @@ const PrismaHero = () => {
           <SecondRowLeft>
             <GridTitleSecond>About the Lunastus and Sine Ripae</GridTitleSecond>{" "}
             <RowText>
-              Commissioned during the eight decade of the Synthetic War, the
+              Commissioned during the eighth decade of the Synthetic War, the
               Lunastus was the most advanced starship of its kind. With a normal
               crew complement of 2,000 souls, the Lunastus was a highly capable
               vessel, equally able to launch planet-based assaults and hold its
