@@ -16,11 +16,11 @@ export const nftCardData = [
   },
   {
     image: nft_placeholder,
-    slug: "",
+    slug: "lunastus-ripae",
     external: false,
-    page: "COMING SOON",
-    coming: true,
-    hashtag: "",
+    page: "Buy the NFT",
+    coming: false,
+    hashtag: "Set: Origin Collection",
     text: "Starship and Scoutship: Lunastus and Sine Ripae",
   },
   {
