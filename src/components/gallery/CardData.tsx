@@ -20,8 +20,8 @@ export const nftCardData = [
     external: false,
     page: "Buy the NFT",
     coming: false,
-    hashtag: "Set: Origin Collection",
-    text: "Starship and Scoutship: Lunastus and Sine Ripae",
+    hashtag: "Lunastus and Sine Ripae: Starship and Scoutship",
+    text: "Set Origin Collection",
   },
   {
     image: cent,
